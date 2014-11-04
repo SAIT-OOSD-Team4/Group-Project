@@ -1,0 +1,126 @@
+/*
+*/
+
+
+body {
+    /*background-image:url(Images/bg_stamps.png); */
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;*/
+    
+    font-family: 'Exo', sans-serif;
+    text-align: center; 
+    font-size: 19px;
+    color: black;  
+}
+
+h1 {
+    font-family: 'Exo', sans-serif;
+    text-align: right; 
+    font-size: 45px;
+    color: cyan;
+    padding: 10px;
+    margin: 0;
+}
+
+h2,h3 {
+    font-family: 'Exo', sans-serif;
+    text-align: right; 
+    font-size: 30px;
+    color: rgba(0,255,255,0.4);
+    margin: 0;    
+}
+
+p01 {
+    font-family: 'Exo', sans-serif;
+    text-align: right; 
+    font-size: 19px;
+    color: gray;
+    padding: 10px;
+}
+
+div01 {
+    font-family: 'Exo', sans-serif;
+    width:200px; 
+    height:150px; 
+    /*left:600px;*/               
+    color:white; 
+    text-align:left; 
+    font-size:15px; 
+}
+
+div02 {
+    background-color:rgba(1,1,1,0.5);
+    font-family: 'Exo', sans-serif;
+    float:right;          
+    color:rgba(255,255,255,0.8); 
+    text-align:left; 
+    font-size:15px;
+    padding-left: 25px;
+}
+
+div03 {
+    text-align:left; 
+    float: right;
+}
+
+
+#linkcells
+{
+    background-color:rgba(1,1,1,0.4);
+    color: white;
+    font-size:25px; 
+    text-decoration-skip: ink;
+    padding: 15px;
+    float: right;
+    top: 300px
+}
+    
+#wrap {
+    
+    background-color:transparent;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    padding:0px;
+}
+
+#header {
+    background-color:black;
+    color:rgba(255,255,255,0.8); 
+    text-align:right;
+    margin-left: auto;
+    margin-right: auto;
+    height:140px;
+    padding:5px;
+}
+#nav {
+    background-color:rgba(1,1,1,0.4);
+    text-align: right; 
+    float:left;
+    color:white;
+    line-height:30px;
+    font-size: 15px;
+    height:740px;
+    width:150px;
+    padding:10px; 
+}
+#section {
+    text-align: right; 
+    color:rgba(255,255,255,0.7); 
+    font-size:15px;
+    float:right;
+    width:750px;
+    padding:10px; 
+}
+#footer {
+    background-color:black;
+    font-size:13px;
+    color: gray;
+    clear: both;
+    text-align:center;
+    padding:5px; 
+}
+
+
