@@ -25,7 +25,7 @@
                 
                 <!-- header content goes here --> 
                 <?php
-                    $title = "title";
+                    $title = "welcome to Travel Experts";
                     include("header.php");
                 ?>
             
