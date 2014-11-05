@@ -7,19 +7,11 @@
 <html>
 
     <head>
-<<<<<<< HEAD
         <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'><!--google fonts-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css"><!--css stylesheet-->
         <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
         
         <title>Vacation Packages</title>
-=======
-        
-        <link href='http://fonts.googleapis.com/css?family=Exo:300,400,800' rel='stylesheet' type='text/css'><!--google fonts-->
-        <link rel="stylesheet" type="text/css" href="stylesheet.css"><!--css stylesheet-->
-        <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
-
->>>>>>> origin/master
              
     </head>
 
@@ -32,11 +24,9 @@
                 
                 <!-- header content goes here --> 
                 <?php
-<<<<<<< HEAD
-                    $title = "vacation packages";
-=======
+
                     $title = "Vacation Packages";
->>>>>>> origin/master
+
                     include("header.php");
                 ?>
             
@@ -47,23 +37,13 @@
                 
                 <!-- nav content goes here --> 
                 <?php
-<<<<<<< HEAD
                     include("navigation.php");
-=======
-                    include("nav.php");
->>>>>>> origin/master
                 ?>
                 
             </div><!-- nav ends --> 
             
 
-<<<<<<< HEAD
             <div id="section"><!-- section starts -->
-                
-                <!-- section content goes here --> 
-        
-=======
-            <div id="section" style="color:black;"><!-- section starts -->
                 
                 <!-- section content goes here --> 
         <p>
@@ -92,7 +72,7 @@
            print("</table>");
 
         ?> 
->>>>>>> origin/master
+
             </div><!-- section ends --> 
             
 
