@@ -2,16 +2,16 @@
 
 -->
 
+
 <!DOCTYPE html>
 <html>
 
     <head>
-        
         <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'><!--google fonts-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css"><!--css stylesheet-->
         <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
         
-        <title>Main Page</title>
+        <title>Vacation Packages</title>
              
     </head>
 
@@ -24,7 +24,7 @@
                 
                 <!-- header content goes here --> 
                 <?php
-                    $title = "welcome to Travel Experts";
+                    $title = "vacation packages";
                     include("header.php");
                 ?>
             
@@ -62,4 +62,3 @@
         
     </body>
 </html>
-

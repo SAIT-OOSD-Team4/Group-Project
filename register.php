@@ -11,7 +11,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
 
     <head>
         
-        <link href='http://fonts.googleapis.com/css?family=Exo:300,400,800' rel='stylesheet' type='text/css'><!--google fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'><!--google fonts-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css"><!--css stylesheet-->
         <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
         
@@ -52,7 +52,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
                      
                     <!--- Row One --->
                     <div02>
-                        <p style="color:cyan"><b>Contact Information</b></p>
+                        <h3><b>Contact Information</b></h3>
                         <hr><!---Horizontal rule --->
                         <table>
                             <col width="200px">
@@ -117,11 +117,10 @@ Assignment: Project Workshop HTML/CSS/Javascript
                         </table>
                     </div02>
     
-                    <br /><br /><br /><br /><br />
                     
                     <!--- Row Two --->
                     <div02>
-                        <p style="color:cyan"><b>New Profile Information</b></p>
+                        <h3><b>New Profile Information</b></h3>
                         <hr>
                         <table>
                             <col width="200px">
@@ -139,14 +138,14 @@ Assignment: Project Workshop HTML/CSS/Javascript
                                 <td><input type="text" name="password" size="45px" onchange="verify_password()"></td>
                             </tr>
                             <tr> 
-                                <td colspan="3">select a password between 3-8 characters</td>
+                                <td colspan="3" align="center">between 3-8 characters</td>
                             </tr>
                         </table>
                     </div02>
                     
                     <!--- Row Three -->
                     <div02>
-                        <p style="color:cyan" ><b>Additonal Information</b></p>
+                        <h3><b>Additonal Information</b></h3>
                         <hr>
                         <table >
                             <col width="200px">
@@ -166,7 +165,8 @@ Assignment: Project Workshop HTML/CSS/Javascript
 
                     <!---Submit-Reset and Home Buttons --->
                     <div02 style="float:left; background-color:transparent;"> 
-                        <input type="submit" onclick="return confirm('Do you want to submit the information?')" style="width:100px; height:25px;">
+                        <input type="submit" onclick="return confirm('Do you want to submit the information?')" 
+                               style="width:100px; height:25px;">
                         <br /><br />
        
                         <input type="reset"  onclick="return confirm('Do you want to reset all?')" style="width:100px; height:25px;">

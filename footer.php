@@ -3,7 +3,7 @@
 
     <head></head>
     <body>
-        Copyright &copy; 2014<br>
+        Copyright Team4 &copy; 2014<br>
                 <script>
                     var x; 
                     for(x=1; x<=50; x++) document.write('-');/*display underscore footer*/

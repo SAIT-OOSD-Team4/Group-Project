@@ -8,11 +8,11 @@
 
     <head>
         
-        <link href='http://fonts.googleapis.com/css?family=Exo:300,400,800' rel='stylesheet' type='text/css'><!--google fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'><!--google fonts-->
         <link rel="stylesheet" type="text/css" href="stylesheet.css"><!--css stylesheet-->
         <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
         
-        <title>Main Page</title>
+        <title>Contact us</title>
              
     </head>
 
@@ -25,7 +25,7 @@
                 
                 <!-- header content goes here --> 
                 <?php
-                    $title = "title";
+                    $title = "contact us";
                     include("header.php");
                 ?>
             
@@ -36,7 +36,7 @@
                 
                 <!-- nav content goes here --> 
                 <?php
-                    include("nav.php");
+                    include("navigation.php");
                 ?>
                 
             </div><!-- nav ends --> 
