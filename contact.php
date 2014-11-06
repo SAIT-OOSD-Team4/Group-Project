@@ -45,7 +45,33 @@
             <div id="section"><!-- section starts -->
                 
                 <!-- section content goes here --> 
-        
+				<?php
+				//LINK CONNECTION STABLISHED WITH DATABASE
+				//LIST WITH CONTACT INFORMATION PRINTED
+				$link = mysqli_connect("localhost", "root", "", "travelexperts") 
+				or die("Connection Error: " . mysqli_connect_error());   
+				$sql = "select * from agencies";
+				$result = mysqli_query($link, $sql) or die("SQL Error");
+  
+				$orderedlist = "<ul>";
+	
+				while($row = mysqli_fetch_row($result))
+				{
+				$orderedlist.= "<br><ol type =i>";
+	
+					foreach ($row as $col)
+		
+					{
+					$orderedlist .= "<li> $col </li>";
+					}
+					$orderedlist .= "</ol>";
+				}
+	
+				$orderedlist .= "</ul>";
+
+				mysqli_close($link);
+				print($orderedlist);
+				?>	
             </div><!-- section ends --> 
             
 
