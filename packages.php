@@ -58,18 +58,64 @@
         </p>
 
         <?php 
-        // later, write out some CSS to make the start date bold and red.
+        // Darcie //
+        // Connect with travel experts database and display the available packages
+
+        //Set up database Connection
+
+        $link = mysqli_connect("localhost", "root", "", "travelexperts") 
+        or die("Connection Error: " . mysqli_connect_error());   
+
+        $sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
+        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";
+
+        // Attempt to reformat the date as something nicer.
+      /*  $sql = "SELECT `PkgName`,`PkgDesc`, DATE_FORMAT(`PkgStartDate`, %a %b %D %Y),`PkgEndDate`,`PkgBasePrice` 
+        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";*/
+
+        $result = mysqli_query($link, $sql) or die("SQL Error");
+
+        // Printing the first row of table with headers 
         print("<table border='1' cellpadding = '5' cellspacing='5'>");
-        for ($i=1; $i < 7; $i++) { 
+           print("<strong>");
            print("<tr>");
-           print("<td> Destination $i </td>");
-           print("<td> Image of Destination </td>");
-           print("<td> Price </td>");
+           print("<td> Package Name </td>");
+           print("<td> Description </td>");
            print("<td> Departure Date </td>");
            print("<td> Return Date </td>");
-           print("<tr>");
-        }
-           print("</table>");
+           print("<td> Price </td>");
+           print("<td>  </td>");             // Order Buttons will go in this column.
+           print("</tr>");
+           print("</strong>");
+
+        // Printing valid packages from the database
+        // $valid_rows = mysqli_fetch_assoc($result);
+    
+            while($valid_rows = mysqli_fetch_assoc($result))
+            {
+                print("<tr>");
+                echo "<td> " . $valid_rows["PkgName"] . "</td>";
+                echo "<td> " . $valid_rows["PkgDesc"] . "</td>";
+                echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+                echo "<td> " . $valid_rows["PkgEndDate"] . "</td>";
+                echo "<td> $" . $valid_rows["PkgBasePrice"] . "</td>";
+                echo "<td> <input type='button' value='Order' > </td>";
+                print("</tr>");
+
+            }
+    
+            print("</table>");
+            
+            print("<p> Testing the date time formatting: <br>");
+            //$date = date_create($valid_rows[2]);
+            //echo date_format($date, 'd/m/Y ');
+
+
+
+
+        // Disconnect from database
+            mysqli_close($link);
+            
 
         ?> 
 
