@@ -50,10 +50,10 @@ Assignment: Project Workshop HTML/CSS/Javascript
                 <br /><br />
                 <form name="info" onsubmit="return verify_all();" method="get" action="bouncer.php">
                      
-                    <!--- Row One --->
+                    <!-- Row One -->
                     <div02>
                         <h3><b>Contact Information</b></h3>
-                        <hr><!---Horizontal rule --->
+                        <hr><!-- Horizontal rule -->
                         <table>
                             <col width="200px">
                             <col width="15px">
@@ -118,7 +118,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
                     </div02>
     
                     
-                    <!--- Row Two --->
+                    <!-- Row Two -->
                     <div02>
                         <h3><b>New Profile Information</b></h3>
                         <hr>
@@ -143,9 +143,9 @@ Assignment: Project Workshop HTML/CSS/Javascript
                         </table>
                     </div02>
                     
-                    <!--- Row Three -->
+                    <!-- Row Three -->
                     <div02>
-                        <h3><b>Additonal Information</b></h3>
+                        <h3><b>Additional Information</b></h3>
                         <hr>
                         <table >
                             <col width="200px">
@@ -163,7 +163,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
                         </table>
                     </div02>
 
-                    <!---Submit-Reset and Home Buttons --->
+                    <!---Submit-Reset and Home Buttons -->
                     <div02 style="float:left; background-color:transparent;"> 
                         <input type="submit" onclick="return confirm('Do you want to submit the information?')" 
                                style="width:100px; height:25px;">
