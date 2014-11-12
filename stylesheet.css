@@ -18,6 +18,7 @@ body {
     color: white;  
 }
 
+/*CSS for text format*/
 h1 {
     font-family: 'Poiret One', cursive;
     color:#99CC00;
@@ -27,7 +28,6 @@ h1 {
     margin: 0;
     margin-right: 20px;
 }
-
 h2 {
     font-family: 'Poiret One', cursive;
     text-align: right; 
@@ -43,16 +43,6 @@ h3 {
     padding: 3px;
     margin: 0;    
 }
-
-p01 {
-    font-family: 'Poiret One', cursive;
-    color:rgba(255,255,255,0.7); 
-    text-align: right; 
-    font-size: 25px;
-    padding: 10px;
-    margin-right: 20px;
-}
-
 div01 {
     font-family: 'Poiret One', cursive;
     color:rgba(255,255,255,0.9); 
@@ -61,7 +51,6 @@ div01 {
     text-align:left; 
     font-size:15px; 
 }
-
 div02 {
     background-color:rgba(1,1,1,0.5);
     font-family: 'Poiret One', cursive;
@@ -73,28 +62,8 @@ div02 {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
-div03 {
-    text-align:left; 
-    float: right;
-}
-
-.alignRight {
-    text-align:right;
-}
-
-#linkcells
-{
-    background-color:rgba(1,1,1,0.4);
-    color: white;
-    font-size:25px; 
-    text-decoration-skip: ink;
-    padding: 15px;
-    float: right;
-    top: 300px;
-}
    
-/*classes for sections on the page*/
+/*classes for sections on the pages*/
 #wrap {
     background-color:transparent;
     margin-left: auto;
@@ -111,18 +80,16 @@ div03 {
     height:100px;
     padding:5px;
 }
-
 #nav {
     background-color:rgba(1,1,1,0.5);
     text-align: center; 
     float:none;
     color:white;
     font-size: 15px;
-    height:30px;
+    height:40px;
     margin-top:10px;
     padding:10px; 
 }
-
 #section {
     color:rgba(255,255,255,0.9);
     text-align: right; 
@@ -131,7 +98,6 @@ div03 {
     width:750px;
     padding:10px;
 }
-
 #footer {
     background-color:rgba(1,1,1,0.7);
     color: rgba(255,255,255,0.9); 
@@ -142,4 +108,92 @@ div03 {
     margin-top:10px;
 }
 
+
+/*classes for buttons*/ 
+/*navigation menu*/ 
+#buttonNav {
+    background: rgba(1,1,1,0.7);
+    font-family: 'Jura', sans-serif;
+    color: #99CC00;
+    height: 35px;
+    width: 150px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    font-weight:bolder;
+
+}
+#buttonNav:hover {
+    background-color: #99CC00;
+    font-family: 'Jura', sans-serif;
+    color:rgba(1,1,1,0.7); 
+    text-decoration: none;
+    font-weight: bolder;
+    
+    /*Transition
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;*/
+}
+/*special ex:logins*/  
+#buttonSpecial {
+    background: #99CC00;
+    font-family: 'Jura', sans-serif;
+    color: rgba(1,1,1,0.7);
+    height: 35px;
+    width: 70px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    font-weight:bolder;
+}
+#buttonSpecial:hover {
+    background-color: rgba(1,1,1,0.7); 
+    font-family: 'Jura', sans-serif;
+    color:#99CC00;
+    text-decoration: none;
+    font-weight: bolder;
+    
+    /*Transition
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;*/
+}
+
+
+
+
+
+
+
+div03 {
+    text-align:left; 
+    float: right;
+}
+.alignRight {
+    text-align:right;
+}
+
+#linkcells
+{
+    background-color:rgba(1,1,1,0.4);
+    color: white;
+    font-size:25px; 
+    text-decoration-skip: ink;
+    padding: 15px;
+    float: right;
+    top: 300px;
+}
+p01 {
+    font-family: 'Poiret One', cursive;
+    color:rgba(255,255,255,0.7); 
+    text-align: right; 
+    font-size: 25px;
+    padding: 10px;
+    margin-right: 20px;
+}
 
