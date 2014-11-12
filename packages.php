@@ -58,7 +58,7 @@
         </p>
 
         <?php 
-        // Darcie Milliken, November 10 2014//
+        // Darcie //
         // Connect with travel experts database and display the available packages
 
         //Set up database Connection
