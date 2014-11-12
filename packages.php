@@ -58,7 +58,7 @@
         </p>
 
         <?php 
-        // Darcie //
+        // Darcie Milliken, November 10 2014//
         // Connect with travel experts database and display the available packages
 
         //Set up database Connection
@@ -67,7 +67,10 @@
         or die("Connection Error: " . mysqli_connect_error());   
 
         $sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
-        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";
+        FROM `packages` WHERE `PkgEndDate`>= DATE(NOW())";
+
+        /*$sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
+        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";*/
 
         // Attempt to reformat the date as something nicer.
       /*  $sql = "SELECT `PkgName`,`PkgDesc`, DATE_FORMAT(`PkgStartDate`, %a %b %D %Y),`PkgEndDate`,`PkgBasePrice` 
@@ -89,7 +92,7 @@
            print("</strong>");
 
         // Printing valid packages from the database
-        // $valid_rows = mysqli_fetch_assoc($result);
+        
     
             while($valid_rows = mysqli_fetch_assoc($result))
             {
