@@ -28,6 +28,7 @@
                     $title = "Vacation Packages";
 
                     include("header.php");
+                    include("functions.php");
                 ?>
             
             </div><!-- header ends -->   
@@ -46,6 +47,7 @@
             <div id="section"><!-- section starts -->
                 
                 <!-- section content goes here --> 
+                <div02>
         <p>
             Irish ipsum dolor sit amet. Clover pub fiddle leprechaun Baisleach bréige paddy shamrock 
             Spíochnó potato farmer belfast cork it bailey’s lad O'Toole. 
@@ -64,17 +66,12 @@
         //Set up database Connection
 
         $link = mysqli_connect("localhost", "root", "", "travelexperts") 
-        or die("Connection Error: " . mysqli_connect_error());   
+         or die("Connection Error: " . mysqli_connect_error());   
+
+         // Query to grab the desired elemnents from the database 
 
         $sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
         FROM `packages` WHERE `PkgEndDate`>= DATE(NOW())";
-
-        /*$sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
-        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";*/
-
-        // Attempt to reformat the date as something nicer.
-      /*  $sql = "SELECT `PkgName`,`PkgDesc`, DATE_FORMAT(`PkgStartDate`, %a %b %D %Y),`PkgEndDate`,`PkgBasePrice` 
-        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";*/
 
         $result = mysqli_query($link, $sql) or die("SQL Error");
 
@@ -87,7 +84,7 @@
            print("<td> Departure Date </td>");
            print("<td> Return Date </td>");
            print("<td> Price </td>");
-           print("<td>  </td>");             // Order Buttons will go in this column.
+           print("<td>  </td>");           // Order Buttons will go in this column.
            print("</tr>");
            print("</strong>");
 
@@ -99,7 +96,18 @@
                 print("<tr>");
                 echo "<td> " . $valid_rows["PkgName"] . "</td>";
                 echo "<td> " . $valid_rows["PkgDesc"] . "</td>";
-                echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+                
+                // If the start date is in the past, display it with a bold, red style. 
+                if (compare_dates($valid_rows["PkgStartDate"]))
+                  {
+                    echo "<td style='color:red; font-weight:bold;'> " . $valid_rows["PkgStartDate"] . "</td>";
+                  }
+                else
+                {
+                    echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+
+                }
+
                 echo "<td> " . $valid_rows["PkgEndDate"] . "</td>";
                 echo "<td> $" . $valid_rows["PkgBasePrice"] . "</td>";
                 echo "<td> <input type='button' value='Order' > </td>";
@@ -108,12 +116,7 @@
             }
     
             print("</table>");
-            
-            print("<p> Testing the date time formatting: <br>");
-            //$date = date_create($valid_rows[2]);
-            //echo date_format($date, 'd/m/Y ');
-
-
+  
 
 
         // Disconnect from database
@@ -121,7 +124,7 @@
             
 
         ?> 
-
+        <div02>
             </div><!-- section ends --> 
             
 

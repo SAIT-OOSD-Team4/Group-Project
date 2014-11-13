@@ -1,13 +1,7 @@
 <?php
 // Darcie Milliken
 // November 12 2014
-// This file contains functions that the other pages of the website can use
-
-function connect_to_database()
-{
-	$link = mysqli_connect("localhost", "root", "", "travelexperts") 
-        or die("Connection Error: " . mysqli_connect_error()); 
-}
+// This file contains functions for the website pages to use. 
 
 
 function compare_dates($dateDB)
