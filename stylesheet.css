@@ -36,12 +36,26 @@ h2 {
     margin: 0;    
 }
 h3 {
+    background-color:rgba(1,1,1,0.5);
     font-family: 'Poiret One', cursive;
-    text-align: left; 
+    color: white;
+    text-align: right; 
+    font-size: 15px;
+    padding: 20px;
+    border: 0px;
+    margin: 0;
+}
+h4 {
+    /*for green accent*/
+    font-family: 'Poiret One', cursive;
     color: #99CC00;
-    font-size: 18px;
-    padding: 3px;
-    margin: 0;    
+    font-size: 20px;
+    text-align: right; 
+    padding: 0px;
+    padding-right: 20px;
+    border: 0px;
+    margin: 0;
+    font-weight: bolder;
 }
 div01 {
     font-family: 'Poiret One', cursive;
@@ -62,6 +76,15 @@ div02 {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+div03 {
+    /*for text and content on the side navigation bar*/
+    text-align:left; 
+    font-family: 'Poiret One', cursive;
+    color:rgba(255,255,255,1);
+    text-decoration: none;
+    
+}
+
    
 /*classes for sections on the pages*/
 #wrap {
@@ -90,6 +113,19 @@ div02 {
     margin-top:10px;
     padding:10px; 
 }
+
+#sideNav {
+    background-color:rgba(1,1,1,0.5);
+    text-align: center; 
+    float:left;
+    color:white;
+    font-size: 15px;
+    width: 300px;
+    height:450px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:10px; 
+}
 #section {
     color:rgba(255,255,255,0.9);
     text-align: right; 
@@ -112,8 +148,8 @@ div02 {
 /*classes for buttons*/ 
 /*navigation menu*/ 
 #buttonNav {
+    font-family: 'Poiret One', cursive;
     background: rgba(1,1,1,0.7);
-    font-family: 'Jura', sans-serif;
     color: #99CC00;
     height: 35px;
     width: 150px;
@@ -121,11 +157,10 @@ div02 {
     display: block;
     text-decoration: none;
     font-weight:bolder;
-
 }
 #buttonNav:hover {
+    font-family: 'Poiret One', cursive;
     background-color: #99CC00;
-    font-family: 'Jura', sans-serif;
     color:rgba(1,1,1,0.7); 
     text-decoration: none;
     font-weight: bolder;
@@ -139,20 +174,21 @@ div02 {
 }
 /*special ex:logins*/  
 #buttonSpecial {
-    background: #99CC00;
-    font-family: 'Jura', sans-serif;
-    color: rgba(1,1,1,0.7);
+    font-family: 'Poiret One', cursive;
+    background: rgba(1,1,1,0.7);
+    color: #99CC00;
     height: 35px;
     width: 70px;
     overflow: hidden;
     display: block;
     text-decoration: none;
     font-weight:bolder;
+    float: right;
 }
 #buttonSpecial:hover {
-    background-color: rgba(1,1,1,0.7); 
-    font-family: 'Jura', sans-serif;
-    color:#99CC00;
+    font-family: 'Poiret One', cursive;
+    background-color:  #99CC00;
+    color:rgba(1,1,1,0.7);
     text-decoration: none;
     font-weight: bolder;
     
@@ -170,10 +206,110 @@ div02 {
 
 
 
-div03 {
-    text-align:left; 
-    float: right;
+
+/*Navigation menu buttons*/
+#sddm
+{	margin: 0;
+	padding: 0;
+	z-index: 30}
+
+#sddm li {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
 }
+
+#sddm li a
+{	display: block;
+	margin: 0 1px 0 0;
+	padding-top: 10px;
+    padding-bottom: 10px;
+	width: 60px;
+	background: rgba(1,1,1,1);
+	color:#99CC00;
+	text-align: center;
+	text-decoration: none;
+    width:150px;
+}
+
+#sddm li a:hover{
+    background: rgba(1,1,1,0.5);/*bg for tapped main button*/
+}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background:rgba(1,1,1,0.5);
+}
+
+#sddm div a{
+    font-family: 'Poiret One', cursive;
+    position: relative;
+    display: block;
+    margin: 10;
+    padding:10;
+    padding-left: 14px;
+    padding-right: 14px;
+    
+    width: auto;
+    white-space:pre-wrap;/*  nowrap;*/
+    text-align: left;
+    text-decoration: none;
+    background: lightgray;
+    color: black;
+    font-size: 13px;
+}
+
+#sddm div a:hover{
+    background: rgba(1,1,1,0.2);
+    color:#99CC00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .alignRight {
     text-align:right;
 }
@@ -190,7 +326,7 @@ div03 {
 }
 p01 {
     font-family: 'Poiret One', cursive;
-    color:rgba(255,255,255,0.7); 
+    color:rgba(255,255,255,0.9); 
     text-align: right; 
     font-size: 25px;
     padding: 10px;
