@@ -28,6 +28,7 @@
                     $title = "Vacation Packages";
 
                     include("header.php");
+                    include("functions.php");
                 ?>
             
             </div><!-- header ends -->   
@@ -46,15 +47,38 @@
             <div id="section"><!-- section starts -->
                 
                 <!-- section content goes here --> 
+                <div02>
         <p>
-            Irish ipsum dolor sit amet. Clover pub fiddle leprechaun Baisleach bréige paddy shamrock 
-            Spíochnó potato farmer belfast cork it bailey’s lad O'Toole. 
-            Dublin hole digger Lus na gaoithe galway St. Patrick irish fry McMillen wet the tea 
-            Na deirfiúríní whiskey Limerick beer sure look it. Beer get the biscuits cup of tea 
-            green Buí an bhogaigh go way outta that kilkenny. Cassidy oh danny boy a donkey’s years 
-            Luibh bhléine minerals potatoes chips Guinness open the press pot of gold. 
-            Happy out wicklow cluas luchóige petrol Fermanagh O'Connor potatoes clover beer 
-            church sceallagach Killarney mass like hen’s teeth. 
+            Cupcake ipsum dolor sit amet halvah oat cake. 
+            Halvah chocolate bar jelly-o jelly-o. Oat cake sweet carrot cake icing tart oat cake candy canes 
+            cotton candy. Pie caramels oat cake tiramisu chocolate cake. 
+            Unerdwear.com chupa chups croissant icing tiramisu jelly beans jelly beans. 
+            Pastry tart donut candy sugar plum marzipan gingerbread powder. Soufflé soufflé jelly beans 
+            danish chocolate cake pastry cupcake. Chocolate bar chocolate cake liquorice danish biscuit pie
+             bonbon ice cream. Apple pie jelly-o pudding brownie sweet roll apple pie chocolate cake.
+              Applicake gummies jelly beans croissant chocolate cake topping unerdwear.com. 
+              Candy canes jelly sesame snaps powder marshmallow liquorice chocolate bar. 
+              Ice cream croissant marshmallow sesame snaps pastry wafer sweet roll macaroon lollipop. 
+              Gingerbread muffin danish jelly chocolate cake fruitcake gingerbread unerdwear.com.
+               Lemon drops wafer oat cake halvah.
+
+        </p>
+
+        <p>
+            <table>
+                <tr height = '100'> 
+                    <td width='100'> <img height = '150' src='images/Caribbean.jpg'>
+                    </td>
+                    <td width='100'> <img height = '150' src='images/polynesian.jpg'>
+                    </td>
+                    <td width='100'> <img height = '150' src='images/asian.jpg'>
+                    </td>
+                    <td width='100'> <img height = '150' src='images/european.jpg'>
+                    </td>
+
+                </tr>
+
+            </table>
         </p>
 
         <?php 
@@ -64,17 +88,12 @@
         //Set up database Connection
 
         $link = mysqli_connect("localhost", "root", "", "travelexperts") 
-        or die("Connection Error: " . mysqli_connect_error());   
+         or die("Connection Error: " . mysqli_connect_error());   
+
 
         $sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
         FROM `packages` WHERE `PkgEndDate`>= DATE(NOW())";
 
-        /*$sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
-        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";*/
-
-        // Attempt to reformat the date as something nicer.
-      /*  $sql = "SELECT `PkgName`,`PkgDesc`, DATE_FORMAT(`PkgStartDate`, %a %b %D %Y),`PkgEndDate`,`PkgBasePrice` 
-        FROM `packages` WHERE `PkgStartDate`> DATE(NOW())";*/
 
         $result = mysqli_query($link, $sql) or die("SQL Error");
 
@@ -99,7 +118,17 @@
                 print("<tr>");
                 echo "<td> " . $valid_rows["PkgName"] . "</td>";
                 echo "<td> " . $valid_rows["PkgDesc"] . "</td>";
-                echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+                //echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+                if (compare_dates($valid_rows["PkgStartDate"]))
+                  {
+                    echo "<td style='color:red; font-weight:bold;'> " . $valid_rows["PkgStartDate"] . "</td>";
+                  }
+                else
+                {
+                    echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+
+                }
+
                 echo "<td> " . $valid_rows["PkgEndDate"] . "</td>";
                 echo "<td> $" . $valid_rows["PkgBasePrice"] . "</td>";
                 echo "<td> <input type='button' value='Order' > </td>";
@@ -108,12 +137,7 @@
             }
     
             print("</table>");
-            
-            print("<p> Testing the date time formatting: <br>");
-            //$date = date_create($valid_rows[2]);
-            //echo date_format($date, 'd/m/Y ');
-
-
+  
 
 
         // Disconnect from database
@@ -121,7 +145,7 @@
             
 
         ?> 
-
+        <div02>
             </div><!-- section ends --> 
             
 
