@@ -88,7 +88,7 @@ var desc=["Customer Login",
           "Register"];
 
 //Array for link on nav bar
-var urlImages =["login.php",
+var urlImages =["login/index.php",
                 "register.php",
                 "register.php"];
 

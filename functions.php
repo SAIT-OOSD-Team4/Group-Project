@@ -15,7 +15,7 @@ Assignment: CPRG210 - Web Application Concepts
         $sql = "INSERT INTO customers values (NULL, '$customerdata[CustomerId]', '$customerdata[CustFirstName]',
         '$customerdata[CustLastName]', '$customerdata[CustAddress]','$customerdata[CustCity]',
         '$customerdata[CustProv]', '$customerdata[CustPostal]', '$customerdata[CustCountry]', '$customerdata[CustHomePhone]',
-        '$customerdata[CustEmail]', '$customerdata[CustBusPhone]', '$customerdata[AgentId]')";
+        '$customerdata[CustEmail]', '$customerdata[CustBusPhone]', '$customerdata[CustPassword]', '$customerdata[CustUserName]')";
         
         $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
         
@@ -24,6 +24,7 @@ Assignment: CPRG210 - Web Application Concepts
         mysqli_close($link);//close connection link  
         return $result;//return BOOL if inser was successful or not
     }
+?>
 
 
 //=======

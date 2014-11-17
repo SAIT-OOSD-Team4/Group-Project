@@ -200,8 +200,37 @@ div03 {
     transition: All 0.5s ease;*/
 }
 
+/*class for normal buttons on menus ex:login button*/  
+#buttonNormal {
+    font-family: 'Poiret One', cursive;
+    background: rgba(1,1,1,0.7);
+    color: #99CC00;
+    height: 40px;
+    width: 100px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: bolder;
 
+}
+#buttonNormal:hover {
+    background-color: #99CC00;
+    font-family: 'Jura', sans-serif;
+    color:rgba(1,1,1,0.7); 
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: bolder;
 
+    
+    /*Transition*/
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+}
 
 
 

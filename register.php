@@ -9,7 +9,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
     session_start();
     if (!isset($_SESSION['loggedin']))
     {
-        $_SESSION['pagename'] = 'addAgentForm.php';
+        $_SESSION['pagename'] = 'register.php';
         //header("Location: login.php");
     }
 ?>
@@ -57,7 +57,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
             <div id="section"><!-- section starts -->
                 
                 <br /><br />
-                <form name="info" onsubmit="return verify_all();" method="get" action="bouncer.php">
+                <form name="registerCust" action="validateCust.php">
                      
                     <!-- Row One -->
                     <div02>
@@ -101,38 +101,22 @@ Assignment: Project Workshop HTML/CSS/Javascript
                             <tr>
                                 <td class="alignRight">Postal Code</td>
                                 <td>-</td>
-                                <td><input type="text" name="CustPostal" size="20px" onchange="verify_postal()"></td>
+                                <td><input type="text" name="CustPostal" size="20px"></td>
                             </tr>
                             <tr>
                                 <td class="alignRight">Home Phone Number</td>
                                 <td>-</td>
-                                <td><input type="text" name="CustHomePhone" size="20px" onchange="verify_home_phone()"></td>
+                                <td><input type="text" name="CustHomePhone" size="20px"></td>
                             </tr>
                             <tr>
                                 <td class="alignRight">Business Phone Number</td>
                                 <td>-</td>
-                                <td><input type="text" name="CustHomePhone" size="20px" onchange="verify_business_phone()"></td>
+                                <td><input type="text" name="CustBusPhone" size="20px"></td>
                             </tr>
                             <tr>
                                 <td class="alignRight">Email</td>
                                 <td>-</td>
-                                <td><input type="text" name="CustEmail" size="45px" onchange="verify_email()"></td>
-                            </tr>
-                            <tr>
-                                <td>Agent Id</td>
-                                <td>:</td>
-                                <td><select name="AgentId">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="4">5</option>
-                                    <option value="4">6</option>
-                                    <option value="4">7</option>
-                                    <option value="4">8</option>
-                                    <option value="4">9</option>
-                                    </select>
-                                </td>
+                                <td><input type="text" name="CustEmail" size="45px"></td>
                             </tr>
                         </table>
                     </div02>
@@ -150,12 +134,17 @@ Assignment: Project Workshop HTML/CSS/Javascript
                             <tr> 
                                 <td class="alignRight">User ID</td>
                                 <td>-</td>
-                                <td><input type="text" name="userid" size="45px"></td>
+                                <td><input type="text" name="CustUserName" size="45px"></td>
                             </tr>
                             <tr> 
                                 <td class="alignRight">Password</td>
                                 <td>-</td>
-                                <td><input type="password" name="password" size="45px"></td>
+                                <td><input type="password" name="CustPassword" size="45px"></td>
+                            </tr>
+                            <tr> 
+                                <td class="alignRight">Repeat Password</td>
+                                <td>-</td>
+                                <td><input type="password" name="passwordRep" size="45px"></td>
                             </tr>
                             <tr> 
                                 <td colspan="3" align="center">between 3-8 characters</td>
@@ -186,11 +175,10 @@ Assignment: Project Workshop HTML/CSS/Javascript
 
                     <!---Submit-Reset and Home Buttons -->
                     <div02 style="float:left; background-color:transparent;"> 
-                        <input type="submit" onclick="return confirm('Do you want to submit the information?')" 
-                               style="width:100px; height:25px;">
+                        <input type="submit" id="buttonNormal" value="Save" style="float:right;"/>
                         <br /><br />
        
-                        <input type="reset"  onclick="return confirm('Do you want to reset all?')" style="width:100px; height:25px;">
+                        <input type="reset"  id="buttonNormal" style="float:right;" onclick="return confirm('Do you want to reset all?')">
                         <br /><br />
                         
                         <a href="index.php">
@@ -198,6 +186,17 @@ Assignment: Project Workshop HTML/CSS/Javascript
                     </div02>
                 </form>
         
+                <div03 style="padding:20px; float:left;">
+                    <!--Reload the form and display error message if found-->
+                    <h3>Please complete every field</h3><br/>
+                    <?php
+                    if (isset($_SESSION['errorMessage']))
+                    {
+                        echo $_SESSION['errorMessage'];
+                    }
+                    ?>
+                
+                </div03>
             </div><!-- section ends --> 
             
 

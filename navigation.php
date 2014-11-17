@@ -25,7 +25,7 @@
                 <td><a href="contact.php" id="buttonNav">Contact Us</a></td>
                 <td><a href="register.php" id="buttonNav">Register</a></td>
                 <td><a href="packages.php" id="buttonNav">Packages</a></td>
-                <td><a href="login.php" id="buttonNav">More</a></td>
+                <td><a href="order.php" id="buttonNav">Order</a></td>
                 <td>
                     <!--list displaying additional links-->
                     <ul id="sddm">
