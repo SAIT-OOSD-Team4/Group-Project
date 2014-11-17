@@ -207,8 +207,8 @@ Returning Date: <input type="date" name="Start" onchange="verify();"><br>
 <center>
 Passenger Medical Information: <textarea name="Comments" rows="3" cols="30" onchange="verify();">
           </textarea><br>
-<input type="submit" value="Send data" onclick="return putdata();">
-<input type="reset" value="Clear" onclick="return putdata();">
+<input type="submit" id="buttonNormal" value="Send data" onclick="return putdata();">
+<input type="reset" id="buttonNormal" value="Clear" onclick="return putdata();">
 </center>
 </form>
 
