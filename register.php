@@ -53,10 +53,8 @@ Assignment: Project Workshop HTML/CSS/Javascript
                 
             </div><!-- nav ends --> 
             
-
             <div id="section"><!-- section starts -->
                 
-                <br /><br />
                 <form name="registerCust" action="validateCust.php">
                      
                     <!-- Row One -->
@@ -154,6 +152,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
                     </div02>
                 
                     <!-- Row Three -->
+                    <!--
                     <div02>
                         <h4><b>Additional Information</b></h4>
                         <hr>
@@ -172,20 +171,36 @@ Assignment: Project Workshop HTML/CSS/Javascript
                             </tr>   
                         </table>
                     </div02>
+-->
 
                     <!---Submit-Reset and Home Buttons -->
-                    <div02 style="float:left; background-color:transparent;"> 
-                        <input type="submit" id="buttonNormal" value="Save" style="float:right;"/>
-                        <br /><br />
-       
-                        <input type="reset"  id="buttonNormal" style="float:right;" onclick="return confirm('Do you want to reset all?')">
-                        <br /><br />
-                        
-                        <a href="index.php">
-                        <img src="Images/home.png" alt="return home" style="width:100px; height:25px;"></a>
+                    <div02 style="float:right; background-color:transparent;"> 
+                        <table>
+                            <col width="110px">
+                            <col width="110px">
+                            <col width="110px">
+                            <tr>
+                                <td>
+                                    <input type="submit" value="Save" id="buttonNormal"  style="float:right;"/>
+                                </td>
+                                <td>
+                                    <input type="reset" id="buttonNormal" style="float:right;" onclick="return confirm('Do you want to reset all?')">
+                                </td>
+                                <td>
+                                    <a href="index.php">
+                                    <input type="button" value="Home" id="buttonNormal"  style="float:right;"/>
+                                    </a>
+                                    <!--<img src="Images/home.png" alt="return home" style="width:100px; height:25px;"></a>-->
+                                </td>
+                            </tr>
+                        </table>
                     </div02>
                 </form>
-        
+                
+            </div><!-- section ends --> 
+            
+            <div id="sideNav"><!-- sideNav starts --> 
+              
                 <div03 style="padding:20px; float:left;">
                     <!--Reload the form and display error message if found-->
                     <h3>Please complete every field</h3><br/>
@@ -195,20 +210,16 @@ Assignment: Project Workshop HTML/CSS/Javascript
                         echo $_SESSION['errorMessage'];
                     }
                     ?>
-                
                 </div03>
-            </div><!-- section ends --> 
+            </div><!-- sideNav ends --> 
             
 
             <div id="footer"><!-- footer starts --> 
-                
                 <!-- footer content goes here --> 
                 <?php
                     include("footer.php");
                 ?>
-                
             </div><!-- footer ends --> 
-            
             
         </div> <!-- header ends -->  
         
