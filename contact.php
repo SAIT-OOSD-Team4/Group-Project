@@ -45,33 +45,106 @@
             <div id="section"><!-- section starts -->
                 
                 <!-- section content goes here --> 
-				<?php
-				//LINK CONNECTION STABLISHED WITH DATABASE
-				//LIST WITH CONTACT INFORMATION PRINTED
-				$link = mysqli_connect("localhost", "root", "", "travelexperts") 
-				or die("Connection Error: " . mysqli_connect_error());   
-				$sql = "select * from agencies";
-				$result = mysqli_query($link, $sql) or die("SQL Error");
-  
-				$orderedlist = "<ul>";
-	
-				while($row = mysqli_fetch_row($result))
-				{
-				$orderedlist.= "<br><ol type =i>";
-	
-					foreach ($row as $col)
-		
-					{
-					$orderedlist .= "<li> $col </li>";
-					}
-					$orderedlist .= "</ol>";
-				}
-	
-				$orderedlist .= "</ul>";
+			
 
-				mysqli_close($link);
-				print($orderedlist);
-				?>	
+<?php
+	//LINK CONNECTION STABLISHED WITH DATABASE
+	//LIST WITH CONTACT INFORMATION PRINTED
+   $link = mysqli_connect("localhost", "root", "", "travelexperts") or die("Connection Error: " . mysqli_connect_error());   
+   
+   
+//Agency 1 Info
+   $sql = "select * from agencies where `AgencyId`= 1";
+   $result = mysqli_query($link, $sql) or die("SQL Error");
+  
+  
+   $datatable = "<table>";
+   while($row = mysqli_fetch_assoc($result))
+   {
+   
+      $datatable .= "<tr>";
+	  foreach ($row as $col)
+	  {
+	     $datatable .= "<td>$col</td>";
+	  }
+	
+	  $datatable .= "</tr>";
+   }
+   $datatable .= "</table>";
+	
+//Agency 2 Info
+   $sql = "select * from agencies where `AgencyId`= 2";
+   $result = mysqli_query($link, $sql) or die("SQL Error");
+   
+
+   $datatable0 = "<table>";
+   while($row = mysqli_fetch_assoc($result))
+   {
+   
+      $datatable0 .= "<tr>";
+	  foreach ($row as $col)
+	  {
+	     $datatable0 .= "<td>$col</td>";
+	  }
+	
+	  $datatable0 .= "</tr>";
+   }
+   $datatable0 .= "</table>";
+
+//Agents from Agency 1
+   $sql = "SELECT `AgtFirstName`,`AgtMiddleInitial`,`AgtBusPhone`,`AgtEmail`, `AgtPosition`
+   FROM `agents` WHERE `AgencyId`= 1";
+
+   $result = mysqli_query($link, $sql) or die("SQL Error");
+   
+   
+   $datatable1 = "<table>";
+   while($row = mysqli_fetch_assoc($result))
+   {
+   
+      $datatable1 .= "<tr>";
+	  foreach ($row as $col)
+	  {
+	     $datatable1 .= "<td>$col</td>";
+	  }
+	
+	  $datatable1 .= "</tr>";
+   }
+   $datatable1 .= "</table>";
+
+//Agents from Agency 2
+   $sql = "SELECT `AgtFirstName`,`AgtMiddleInitial`,`AgtBusPhone`,`AgtEmail`, `AgtPosition`
+   FROM `agents` WHERE `AgencyId`= 2";
+
+   $result = mysqli_query($link, $sql) or die("SQL Error");
+   
+   
+   $datatable2 = "<table>";
+   while($row = mysqli_fetch_assoc($result))
+   {
+   
+      $datatable2 .= "<tr>";
+	  foreach ($row as $col)
+	  {
+	     $datatable2 .= "<td>$col</td>";
+	  }
+	
+	  $datatable2 .= "</tr>";
+   }
+   $datatable2 .= "</table>";
+
+   mysqli_close($link);
+
+//Print All tables
+   print("<u>Agency Info:</u>");
+   print($datatable);
+   print("<u>Agents Info:</u>");
+   print($datatable1);
+   print("<br><u>Agency Info:</u>");
+   print($datatable0);
+   print("<u>Agents Info:</u>");
+   print($datatable2);
+?>
             </div><!-- section ends --> 
             
 
