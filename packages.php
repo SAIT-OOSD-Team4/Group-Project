@@ -56,30 +56,11 @@
             Pastry tart donut candy sugar plum marzipan gingerbread powder. Soufflé soufflé jelly beans 
             danish chocolate cake pastry cupcake. Chocolate bar chocolate cake liquorice danish biscuit pie
              bonbon ice cream. Apple pie jelly-o pudding brownie sweet roll apple pie chocolate cake.
-              Applicake gummies jelly beans croissant chocolate cake topping unerdwear.com. 
-              Candy canes jelly sesame snaps powder marshmallow liquorice chocolate bar. 
-              Ice cream croissant marshmallow sesame snaps pastry wafer sweet roll macaroon lollipop. 
-              Gingerbread muffin danish jelly chocolate cake fruitcake gingerbread unerdwear.com.
-               Lemon drops wafer oat cake halvah.
+              
 
         </p>
 
-        <p>
-            <table>
-                <tr height = '100'> 
-                    <td width='100'> <img height = '150' src='images/Caribbean.jpg'>
-                    </td>
-                    <td width='100'> <img height = '150' src='images/polynesian.jpg'>
-                    </td>
-                    <td width='100'> <img height = '150' src='images/asian.jpg'>
-                    </td>
-                    <td width='100'> <img height = '150' src='images/european.jpg'>
-                    </td>
 
-                </tr>
-
-            </table>
-        </p>
 
         <?php 
         // Darcie Milliken, November 10 2014//
@@ -131,7 +112,7 @@
 
                 echo "<td> " . $valid_rows["PkgEndDate"] . "</td>";
                 echo "<td> $" . $valid_rows["PkgBasePrice"] . "</td>";
-                echo "<td> <input type='button' value='Order' > </td>";
+                echo "<td> <a href='order.php'> <input id='buttonNormal' type='button' value='Order'></a> </td>";
                 print("</tr>");
 
             }
@@ -145,6 +126,23 @@
             
 
         ?> 
+
+                <p>
+            <table> 
+                <tr height = '100'> 
+                    <td width='100'> <img height = '150' src='images/Caribbean.jpg' >
+                    </td>
+                    <td width='100'> <img height = '150' src='images/polynesian.jpg'>
+                    </td>
+                    <td width='100'> <img height = '150' src='images/asian.jpg'>
+                    </td>
+                    <td width='100'> <img height = '150' src='images/european.jpg'>
+                    </td>
+
+                </tr>
+
+           </table>
+</p>
         <div02>
             </div><!-- section ends --> 
             
