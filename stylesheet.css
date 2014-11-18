@@ -92,8 +92,8 @@ div03 {
     background-color:transparent;
     margin-left: auto;
     margin-right: auto;
-    width: 1000px;
     padding:0px;
+    width: 1000px;
 }
 #header {
     background-color:rgba(1,1,1,0.7);
@@ -121,11 +121,12 @@ div03 {
     float:left;
     color:white;
     font-size: 15px;
-    width: 300px;
-    height:450px;
     margin-top:10px;
     margin-bottom:10px;
     padding:10px; 
+    height:450px;
+    
+    width: 30%;/*300px;*/
 }
 #section {
     color:rgba(255,255,255,0.9);
