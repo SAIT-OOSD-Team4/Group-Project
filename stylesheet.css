@@ -112,7 +112,7 @@ div03 {
     font-size: 15px;
     height:40px;
     margin-top:10px;
-    padding:10px; 
+    padding:10px;
 }
 
 #sideNav {
@@ -125,8 +125,18 @@ div03 {
     margin-bottom:10px;
     padding:10px; 
     height:450px;
-    
-    width: 30%;/*300px;*/
+    width: 300px;
+}
+#sideNavPackagePage {
+
+    text-align: center; 
+    float:left;
+    color:white;
+    font-size: 15px;
+    margin-top:10px;
+    margin-bottom:10px;
+    height:450px;
+    width: 190px;
 }
 #section {
     color:rgba(255,255,255,0.9);
@@ -136,13 +146,15 @@ div03 {
     width:650px;
     padding-top:10px;
 }
-#sectionFull {
+
+#sectionPackagePage {
     color:rgba(255,255,255,0.9);
     text-align: right; 
     font-size:15px;
     float:right;
-    width:1000px;
     padding-top:10px;
+    float: right;
+    width:800px;
 }
 #footer {
     background-color:rgba(1,1,1,0.7);

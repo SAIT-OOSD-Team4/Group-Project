@@ -41,7 +41,7 @@
             </div><!-- nav ends --> 
             
 
-            <div id="sectionFull"><!-- section starts -->
+            <div id="sectionPackagePage"><!-- sectionPackagePage starts -->
                 <!-- section content goes here --> 
                 <div02>
                     <p>
@@ -52,10 +52,9 @@
                         Pastry tart donut candy sugar plum marzipan gingerbread powder. 
                     </p>
                 </div02>
-            </div><!-- section ends -->
-            
-            <div id="sectionFull"><!-- sectionFull starts -->
-                <div03 width="1000px">
+           
+                <div03>
+                    <br/><br/><br/><br/><br/>
                 <?php 
                 // Darcie Milliken, November 10 2014//
                 // Connect with travel experts database and display the available packages
@@ -72,18 +71,27 @@
 
                     $result = mysqli_query($link, $sql) or die("SQL Error");
 
+
                     // Printing the first row of table with headers 
-                    print("<table cellpadding = '5' cellspacing='5'>");
-                       print("<strong>");
-                       print("<tr>");
-                       print("<td> Package Name </td>");
-                       print("<td> Description </td>");
-                       print("<td> Departure Date </td>");
-                       print("<td> Return Date </td>");
-                       print("<td> Price </td>");
-                       print("<td>  </td>");             // Order Buttons will go in this column.
-                       print("</tr>");
-                       print("</strong>");
+                    print("<table cellpadding = '5' cellspacing='5' style='float:right;'>");
+                    print("<col width='200px'>");
+                    print("<col width='200px'>");
+                    print("<col width='100px'>");
+                    print("<col width='100px'>");
+                    print("<col width='100px'>");
+                    print("<col width='00px'>");
+
+                           
+                   print("<strong>");
+                   print("<tr>");
+                   print("<td style='background-color:rgba(1,1,1,0.9);'> Package Name </td>");
+                   print("<td style='background-color:rgba(1,1,1,0.9);'> Description </td>");
+                   print("<td style='background-color:rgba(1,1,1,0.9);'> Departure Date </td>");
+                   print("<td style='background-color:rgba(1,1,1,0.9);'> Return Date </td>");
+                   print("<td style='background-color:rgba(1,1,1,0.9);'> Price </td>");
+                   print("<td>  </td>");             // Order Buttons will go in this column.
+                   print("</tr>");
+                   print("</strong>");
 
                     // Printing valid packages from the database
 
@@ -91,22 +99,24 @@
                     while($valid_rows = mysqli_fetch_assoc($result))
                     {
                         print("<tr>");
-                        echo "<td> " . $valid_rows["PkgName"] . "</td>";
-                        echo "<td> " . $valid_rows["PkgDesc"] . "</td>";
+                        echo "<td style='background-color:rgba(1,1,1,0.7); color:#99FF33;'> " . $valid_rows["PkgName"] . "</td>";
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $valid_rows["PkgDesc"] . "</td>";
                         //echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
                         if (compare_dates($valid_rows["PkgStartDate"]))
                           {
-                            echo "<td style='color:red; font-weight:bold;'> " . $valid_rows["PkgStartDate"] . "</td>";
+                            echo "<td style='background-color:rgba(1,1,1,0.5);' 
+                            style='color:red; font-weight:bold;'> " . $valid_rows["PkgStartDate"] . "</td>";
                           }
                         else
                         {
-                            echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+                            echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $valid_rows["PkgStartDate"] . "</td>";
 
                         }
 
-                        echo "<td> " . $valid_rows["PkgEndDate"] . "</td>";
-                        echo "<td> $" . $valid_rows["PkgBasePrice"] . "</td>";
-                        echo "<td> <a href='order.php'> <input id='buttonNormal' type='button' value='Order'></a> </td>";
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $valid_rows["PkgEndDate"] . "</td>";
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> $" . $valid_rows["PkgBasePrice"] . "</td>";
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> 
+                        <a href='order.php'> <input id='buttonNormal' type='button' value='Order'></a> </td>";
                         print("</tr>");
 
                     }
@@ -116,26 +126,33 @@
                     // Disconnect from database
                     mysqli_close($link);
                 ?> 
+            </div><!-- sectionPackagePage ends --> 
 
-                <p>
-                    <table> 
-                        <tr height = '100'> 
-                            <td width='100'> <img height = '150' src='images/Caribbean.jpg' >
-                            </td>
-                            <td width='100'> <img height = '150' src='images/polynesian.jpg'>
-                            </td>
-                            <td width='100'> <img height = '150' src='images/asian.jpg'>
-                            </td>
-                            <td width='100'> <img height = '150' src='images/european.jpg'>
-                            </td>
-
-                        </tr>
-                   </table>
-                </p>
-                </div03>
+            <div id="sideNavPackagePage">
+                
+                <table> 
+                    <tr> 
+                        <td width='100'> <img width="180" height="100" src='images/Caribbean.jpg' >
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td width='100'> <img width="180" height="100" src='images/polynesian.jpg'>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td width='100'> <img width="180" height="100" src='images/asian.jpg'>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td width='100'> <img width="180" height="100" src='images/european.jpg'>
+                        </td>
+                    </tr>
+                </table>
+            
+            </div03>
+            </div> <!-- sideNavPackagePage ends --> 
     
-            </div><!-- sectionFull ends --> 
-
+        
             <div id="footer"><!-- footer starts --> 
                 <!-- footer content goes here --> 
                 <?php
