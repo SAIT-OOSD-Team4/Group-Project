@@ -150,28 +150,6 @@ Assignment: Project Workshop HTML/CSS/Javascript
                         </table>
                 
                     </div02>
-                
-                    <!-- Row Three -->
-                    <!--
-                    <div02>
-                        <h4><b>Additional Information</b></h4>
-                        <hr>
-                        <table >
-                            <col width="200px">
-                            <col width="15px">
-                            <col width="350px">
-
-                            <tr> 
-                                <td class="alignRight">Your Message</td>
-                                <td>-</td>
-                                <td>
-                                    <textarea name="comments" cols="40" rows="4">Enter message here
-                                    </textarea>
-                                </td>
-                            </tr>   
-                        </table>
-                    </div02>
--->
 
                     <!---Submit-Reset and Home Buttons -->
                     <div02 style="float:right; background-color:transparent;"> 
@@ -221,7 +199,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
                 ?>
             </div><!-- footer ends --> 
             
-        </div> <!-- header ends -->  
+        </div> <!-- section ends -->  
         
     </body>
 </html>

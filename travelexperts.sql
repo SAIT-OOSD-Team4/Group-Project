@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2014 at 06:15 AM
+-- Generation Time: Nov 18, 2014 at 06:07 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `agents` (
   `AgtPosition` varchar(20) DEFAULT NULL,
   `AgencyId` int(11) DEFAULT NULL,
   PRIMARY KEY (`AgentId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=74 ;
 
 --
 -- Dumping data for table `agents`
@@ -103,7 +103,40 @@ INSERT INTO `agents` (`AgentId`, `AgtFirstName`, `AgtMiddleInitial`, `AgtLastNam
 (6, 'Bruce', 'J.', 'Dixon', '(403) 210-7867', 'bruce.dixon@travelexperts.com', 'Intermediate Agent', 2),
 (7, 'Beverly', 'S.', 'Jones', '(403) 210-7812', 'beverly.jones@travelexperts.com', 'Intermediate Agent', 2),
 (8, 'Jane', NULL, 'Merrill', '(403) 210-7868', 'jane.merrill@travelexperts.com', 'Senior Agent', 2),
-(9, 'Brian', 'S.', 'Peterson', '(403) 210-7833', 'brian.peterson@travelexperts.com', 'Junior Agent', 2);
+(9, 'Brian', 'S.', 'Peterson', '(403) 210-7833', 'brian.peterson@travelexperts.com', 'Junior Agent', 2),
+(41, 'Scruffy', 'S', 'Scruffington', '4039899963', 'scruffy@gmail.com', 'Janitor', 2),
+(42, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(43, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(44, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(45, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(46, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(47, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(48, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(49, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(50, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(51, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(52, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(53, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(54, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(55, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Janitor', 1),
+(56, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(57, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(58, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(59, 'Scruffy', 'r', 'werwer', '454.454.4521(78)', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(60, 'Scroff.po', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(61, 'Scroff,po', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(62, 'Scroff-po', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(63, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(64, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(65, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(66, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(67, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(68, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(69, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(70, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Junior Agent', 2),
+(71, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(72, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1),
+(73, 'Scruffy', 'S', 'Scruffington', '1111111111', 'scruffy@gmail.com', 'Intermediate Agent', 1);
 
 -- --------------------------------------------------------
 
@@ -542,40 +575,45 @@ CREATE TABLE IF NOT EXISTS `customers` (
   `CustBusPhone` varchar(20) NOT NULL,
   `CustEmail` varchar(50) NOT NULL,
   `AgentId` int(11) DEFAULT NULL,
+  `CustPassword` varchar(10) NOT NULL,
+  `CustUserName` varchar(9) NOT NULL,
   PRIMARY KEY (`CustomerId`),
   KEY `EmployeesCustomers` (`AgentId`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=144 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=147 ;
 
 --
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`CustomerId`, `CustFirstName`, `CustLastName`, `CustAddress`, `CustCity`, `CustProv`, `CustPostal`, `CustCountry`, `CustHomePhone`, `CustBusPhone`, `CustEmail`, `AgentId`) VALUES
-(104, 'Laetia', 'Enison', '144-61 87th Ave, NE', 'Calgary', 'AB', 'T2J 6B6', 'Canada', '4032791223', '4032557865', '                                                  ', 4),
-(105, 'Angel', 'Moskowitz', '320 John St., NE', 'Calgary', 'AB', 'T2J 7E3', 'Canada', '4032794228', '4036409874', 'amoskowitz@home.com                               ', 3),
-(106, 'Judith', 'Olvsade', '29 Elmwood Ave.,', 'Calgary', 'AB', 'T2Z 3M9', 'Canada', '4032795652', '4036861598', 'jolvsade@aol.com                                  ', 1),
-(107, 'Catherine', 'Mierzwa', '22-70 41st St.,NW', 'Calgary', 'AB', 'T2Z 2Z9', 'Canada', '4032796878', '4036404563', 'cmierzwa@msn.com                                  ', 5),
-(108, 'Judy', 'Sethi', '63 Stratton Hall, SW', 'Calgary', 'AB', 'T1Y 6N4', 'Canada', '4032795111', '4036204789', 'judysehti@home.com                                ', 7),
-(109, 'Larry', 'Walter', '38 Bay 26th ST. #2A, NE', 'Calgary', 'AB', 'T2J 6B6', 'Canada', '4032793254', '4032845588', 'lwalter@aol.com                                   ', 4),
-(114, 'Winsome', 'Laporte', '268 E.3rd St, SW', 'Calgary', 'AB', 'T1Y 6N4', 'Canada', '4032691125', '4032844565', '                                                  ', 8),
-(117, 'Nancy', 'Kuehn', '44-255 9th St., SW', 'Calgary', 'AB', 'T1Y 6N5', 'Canada', '4032693965', '4032843211', '                                                  ', 6),
-(118, 'Hiedi', 'Lopez', '168 Rowayton Ave, NW', 'Calgary', 'AB', 'T3A 4ZG', 'Canada', '4032699856', '4035901587', 'hlopez@aol.com                                    ', 5),
-(119, 'Mardig', 'Abdou', '160-04 32nd Ave., SW', 'Calgary', 'AB', 'T2P 2G7', 'Canada', '4032691429', '4032251952', '                                                  ', 9),
-(120, 'Ralph', 'Alexander', '2054 73rd St, SW', 'Calgary', 'AB', 'T2P 2G7', 'Canada', '4032691634', '4032256547', '                                                  ', 1),
-(121, 'Sean', 'Pineda', '3 Salem Rd., NW', 'Calgary', 'AB', 'T2K 3E3', 'Canada', '4032691954', '4036864444', 'spineda@hotmail.com                               ', 3),
-(122, 'Julita', 'Lippen', '51-76 VanKleeck St., NW', 'Calgary', 'AB', 'T2K 6C5', 'Canada', '4032551956', '4035901478', 'jlippen@cadvision.co                              ', 4),
-(123, 'Pierre', 'Radicola', '322 Atkins Ave., SE', 'Calgary', 'AB', 'T3G 2C6', 'Canada', '4032551677', '4036867536', 'pradicola@home.com                                ', 8),
-(127, 'Gary', 'Aung', '135-32 Louis Blvd, NE', 'Calgary', 'AB', 'T2V 2K5', 'Canada', '4032807858', '4037501587', '                                                  ', 9),
-(128, 'Jeff', 'Runyan', '109-15 Queens Blvd., NE', 'Calgary', 'AB', 'T2V 2K6', 'Canada', '4032809635', '4036201122', 'jrunyan@aol.com                                   ', 5),
-(130, 'Lula', 'Oates', '11A Emory St., NE', 'Calgary', 'AB', 'T3E 3Z4', 'Canada', '4032439653', '4036861587', 'loates@aol.com                                    ', 9),
-(133, 'James', 'Reed', '109-621 96th St, NE', 'Calgary', 'AB', 'T3E 4A1', 'Canada', '4032432358', '4037201155', 'jreed@aol.com                                     ', 2),
-(135, 'Michelle', 'Masser', '379 Ovington Ave, NE', 'Calgary', 'AB', 'T2J 2S9', 'Canada', '4032441586', '4035908522', 'mmasser@aol.com                                   ', 6),
-(138, 'John', 'Smith', '45 Plaza St. West #2D, NE', 'Calgary', 'AB', 'T3E 5C7', 'Canada', '4032449653', '4032837896', 'johnSmith@hotmail.co                              ', 7),
-(139, 'Angelo', 'Garshman', '82 Western Ave., NE', 'Calgary', 'AB', 'T3E 5C8', 'Canada', '4032259966', '4032696541', '                                                  ', 3),
-(140, 'Derrick', 'Baltazar', '9111 Church Ave. #3N, NE', 'Calgary', 'AB', 'T3E 5C9', 'Canada', '4032255231', '4037502547', '                                                  ', 6),
-(141, 'Robert', 'Boyd', '96-04 57th Ave #12A, NE', 'Calgary', 'AB', 'T3E 5C5', 'Canada', '4032255647', '4037509512', '                                                  ', 3),
-(142, 'Monica', 'Waldman', '257 Depot Rd., NE', 'Calgary', 'AB', 'T2J 6P3', 'Canada', '4032255629', '4032844566', 'mwaldman@aol.com                                  ', 2),
-(143, 'Gerard', 'Biers', '205 19th St., NE', 'Calgary', 'AB', 'T2J 6B6', 'Canada', '4032251952', '4037506578', '                                                  ', 8);
+INSERT INTO `customers` (`CustomerId`, `CustFirstName`, `CustLastName`, `CustAddress`, `CustCity`, `CustProv`, `CustPostal`, `CustCountry`, `CustHomePhone`, `CustBusPhone`, `CustEmail`, `AgentId`, `CustPassword`, `CustUserName`) VALUES
+(104, 'Laetia', 'Enison', '144-61 87th Ave, NE', 'Calgary', 'AB', 'T2J 6B6', 'Canada', '4032791223', '4032557865', '                                                  ', 4, '', ''),
+(105, 'Angel', 'Moskowitz', '320 John St., NE', 'Calgary', 'AB', 'T2J 7E3', 'Canada', '4032794228', '4036409874', 'amoskowitz@home.com                               ', 3, '', ''),
+(106, 'Judith', 'Olvsade', '29 Elmwood Ave.,', 'Calgary', 'AB', 'T2Z 3M9', 'Canada', '4032795652', '4036861598', 'jolvsade@aol.com                                  ', 1, '', ''),
+(107, 'Catherine', 'Mierzwa', '22-70 41st St.,NW', 'Calgary', 'AB', 'T2Z 2Z9', 'Canada', '4032796878', '4036404563', 'cmierzwa@msn.com                                  ', 5, '', ''),
+(108, 'Judy', 'Sethi', '63 Stratton Hall, SW', 'Calgary', 'AB', 'T1Y 6N4', 'Canada', '4032795111', '4036204789', 'judysehti@home.com                                ', 7, '', ''),
+(109, 'Larry', 'Walter', '38 Bay 26th ST. #2A, NE', 'Calgary', 'AB', 'T2J 6B6', 'Canada', '4032793254', '4032845588', 'lwalter@aol.com                                   ', 4, '', ''),
+(114, 'Winsome', 'Laporte', '268 E.3rd St, SW', 'Calgary', 'AB', 'T1Y 6N4', 'Canada', '4032691125', '4032844565', '                                                  ', 8, '', ''),
+(117, 'Nancy', 'Kuehn', '44-255 9th St., SW', 'Calgary', 'AB', 'T1Y 6N5', 'Canada', '4032693965', '4032843211', '                                                  ', 6, '', ''),
+(118, 'Hiedi', 'Lopez', '168 Rowayton Ave, NW', 'Calgary', 'AB', 'T3A 4ZG', 'Canada', '4032699856', '4035901587', 'hlopez@aol.com                                    ', 5, '', ''),
+(119, 'Mardig', 'Abdou', '160-04 32nd Ave., SW', 'Calgary', 'AB', 'T2P 2G7', 'Canada', '4032691429', '4032251952', '                                                  ', 9, '', ''),
+(120, 'Ralph', 'Alexander', '2054 73rd St, SW', 'Calgary', 'AB', 'T2P 2G7', 'Canada', '4032691634', '4032256547', '                                                  ', 1, '', ''),
+(121, 'Sean', 'Pineda', '3 Salem Rd., NW', 'Calgary', 'AB', 'T2K 3E3', 'Canada', '4032691954', '4036864444', 'spineda@hotmail.com                               ', 3, '', ''),
+(122, 'Julita', 'Lippen', '51-76 VanKleeck St., NW', 'Calgary', 'AB', 'T2K 6C5', 'Canada', '4032551956', '4035901478', 'jlippen@cadvision.co                              ', 4, '', ''),
+(123, 'Pierre', 'Radicola', '322 Atkins Ave., SE', 'Calgary', 'AB', 'T3G 2C6', 'Canada', '4032551677', '4036867536', 'pradicola@home.com                                ', 8, '', ''),
+(127, 'Gary', 'Aung', '135-32 Louis Blvd, NE', 'Calgary', 'AB', 'T2V 2K5', 'Canada', '4032807858', '4037501587', '                                                  ', 9, '', ''),
+(128, 'Jeff', 'Runyan', '109-15 Queens Blvd., NE', 'Calgary', 'AB', 'T2V 2K6', 'Canada', '4032809635', '4036201122', 'jrunyan@aol.com                                   ', 5, '', ''),
+(130, 'Lula', 'Oates', '11A Emory St., NE', 'Calgary', 'AB', 'T3E 3Z4', 'Canada', '4032439653', '4036861587', 'loates@aol.com                                    ', 9, '', ''),
+(133, 'James', 'Reed', '109-621 96th St, NE', 'Calgary', 'AB', 'T3E 4A1', 'Canada', '4032432358', '4037201155', 'jreed@aol.com                                     ', 2, '', ''),
+(135, 'Michelle', 'Masser', '379 Ovington Ave, NE', 'Calgary', 'AB', 'T2J 2S9', 'Canada', '4032441586', '4035908522', 'mmasser@aol.com                                   ', 6, '', ''),
+(138, 'John', 'Smith', '45 Plaza St. West #2D, NE', 'Calgary', 'AB', 'T3E 5C7', 'Canada', '4032449653', '4032837896', 'johnSmith@hotmail.co                              ', 7, '', ''),
+(139, 'Angelo', 'Garshman', '82 Western Ave., NE', 'Calgary', 'AB', 'T3E 5C8', 'Canada', '4032259966', '4032696541', '                                                  ', 3, '', ''),
+(140, 'Derrick', 'Baltazar', '9111 Church Ave. #3N, NE', 'Calgary', 'AB', 'T3E 5C9', 'Canada', '4032255231', '4037502547', '                                                  ', 6, '', ''),
+(141, 'Robert', 'Boyd', '96-04 57th Ave #12A, NE', 'Calgary', 'AB', 'T3E 5C5', 'Canada', '4032255647', '4037509512', '                                                  ', 3, '', ''),
+(142, 'Monica', 'Waldman', '257 Depot Rd., NE', 'Calgary', 'AB', 'T2J 6P3', 'Canada', '4032255629', '4032844566', 'mwaldman@aol.com                                  ', 2, '', ''),
+(143, 'Gerard', 'Biers', '205 19th St., NE', 'Calgary', 'AB', 'T2J 6B6', 'Canada', '4032251952', '4037506578', '                                                  ', 8, '', ''),
+(144, '', 'Leisy', 'Mol', '454 ', 'bv', 'mh', 't3x3k4', 'canada', '1122121212', 'jhgftyrded@fcrgd.com', 111221121, '', ''),
+(145, '', 'Leisy', 'Mol', '454 ', 'bv', 'mh', 't3x3k4', 'canada', '1122121212', 'jhgftyrded@fcrgd.com', 1212122121, '', ''),
+(146, '', 'Leisy', 'Mol', '454 ', 'bv', 'mh', 't3x3k4', 'canada', '1122121212', 'jhgftyrded@fcrgd.com', 1212122121, '1234', 'loop');
 
 -- --------------------------------------------------------
 
@@ -698,9 +736,9 @@ CREATE TABLE IF NOT EXISTS `packages` (
 
 INSERT INTO `packages` (`PackageId`, `PkgName`, `PkgStartDate`, `PkgEndDate`, `PkgDesc`, `PkgBasePrice`, `PkgAgencyCommission`) VALUES
 (1, 'Caribbean New Year', '2014-12-25 00:00:00', '2015-01-04 00:00:00', 'Cruise the Caribbean & Celebrate the New Year.', '4800.0000', '400.0000'),
-(2, 'Polynesian Paradise', '2014-12-12 00:00:00', '2014-12-20 00:00:00', '8 Day All Inclusive Hawaiian Vacation', '3000.0000', '310.0000'),
-(3, 'Asian Expedition', '2015-05-14 00:00:00', '2015-05-28 00:00:00', 'Airfaire, Hotel and Eco Tour.', '2800.0000', '300.0000'),
-(4, 'European Vacation', '2014-11-01 00:00:00', '2014-11-14 00:00:00', 'Euro Tour with Rail Pass and Travel Insurance', '3000.0000', '280.0000');
+(2, 'Polynesian Paradise', '2014-12-12 00:00:00', '2015-12-20 00:00:00', '8 Day All Inclusive Hawaiian Vacation', '3000.0000', '310.0000'),
+(3, 'Asian Expedition', '2014-05-14 00:00:00', '2015-05-28 00:00:00', 'Airfaire, Hotel and Eco Tour.', '2800.0000', '300.0000'),
+(4, 'European Vacation', '2014-11-01 00:00:00', '2015-11-14 00:00:00', 'Euro Tour with Rail Pass and Travel Insurance', '3000.0000', '280.0000');
 
 -- --------------------------------------------------------
 
@@ -1405,6 +1443,26 @@ INSERT INTO `triptypes` (`TripTypeId`, `TTName`) VALUES
 ('B', 'Business                 '),
 ('G', 'Group                    '),
 ('L', 'Leisure                  ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `userid` varchar(20) NOT NULL,
+  `password` varchar(26) NOT NULL,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userid`, `password`) VALUES
+('user1', 'password1'),
+('user2', 'password2');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
