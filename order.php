@@ -149,6 +149,7 @@ function putdata()
             
 
             <div id="section"><!-- section starts -->
+                <div02>
 
                 <table border="5">
                 <tr>
@@ -157,47 +158,42 @@ function putdata()
                 </td>
                 <td>
                 <form name="stuff" method="post" action="addcust.php" onsubmit="return edit_all();">
-                <table>
-                <tr>
-                <td align="right">
-                Flight: <input type="checkbox" name="flight"><br>
-                </td>
+                
+                    <table>
+                        <tr>
+                            <td align="right">
+                                Flight: <input type="checkbox" name="flight">
+                            </td>
 
-                <td align="left">
-                Flight + Hotel: <input type="checkbox" name="fligt+hotel"><br>
-                </td>
+                            <td align="left">
+                                Flight + Hotel: <input type="checkbox" name="fligt+hotel">
+                            </td>
 
-                <tr></tr>
-                <td align="right">
-                Cruise: <input type="checkbox" name="cruise"><br>
-                </td>
+                            <td align="right">
+                                Cruise: <input type="checkbox" name="cruise">
+                            </td>
+
+                            <td align="left">
+                                Cruise + Hotel : <input type="checkbox" name="cruise+hotel">
+                            </td>
+                            <td align="right">
+                                Rentals: <input type="checkbox" name="rentals">
+                            </td>
+                            <td align="left">
+                                Extras: <input type="checkbox" name="rentals">
+                            </td>
+                        </tr>
 
 
+                        <tr>
+                        <td align="right">Travelling From:</td>
+                        <td>
+                        <input type="text" name="from" size="30" maxlength="30" onchange="from();"> </td></tr>
 
-                <td align="left">
-                Cruise + Hotel : <input type="checkbox" name="cruise+hotel"><br>
-                </td>
-
-                </tr>
-                <tr>
-                <td align="right">
-                Rentals: <input type="checkbox" name="rentals"><br>
-                </td>
-                <td align="left">
-                Extras: <input type="checkbox" name="rentals"><br>
-                </td>
-
-                </tr>
-                </tr>
-                <tr>
-                <td align="right">Travelling From:</td>
-                <td>
-                <input type="text" name="from" size="30" maxlength="30" onchange="from();"> </td></tr>
-
-                <tr>
-                <td align="right">Travelling To:</td>
-                <td>
-                <input type="text" name="to" size="30" maxlength="30" onchange="to();"> </td></tr>
+                        <tr>
+                        <td align="right">Travelling To:</td>
+                        <td>
+                        <input type="text" name="to" size="30" maxlength="30" onchange="to();"> </td></tr>
 
 
 
@@ -293,58 +289,40 @@ function putdata()
 <td align="left"> <select name="Reference" onchange="verify();">
              <option selected>Family/Friend</option>
              <option>Other</option> </td>
-</tr>
-						
-						
-						
-						
-
-
-<tr><td>
-Travelling Date: </td> <td align="left"> <input type="date" name="going" onchange="verify();"><br></td> </tr>
-
-<tr> <td>
-Returning Date:  </td> <td align="left"> <input type="date" name="returning" onchange="verify();"><br>
-</td>
-</tr>
-
-<tr><td>
-Passenger Medical Information:  </td><td align="left"><textarea name="Comments" rows="3" cols="30" onchange="verify();">
-          </textarea><br>
-</td></tr>	
-
-       <tr> <td align="right">
-	 <input type="submit" id="buttonNormal" value="Send data" onclick="return putdata();">
- <input type="reset" id="buttonNormal" value="Clear" onclick="return putdata();">
-</td></tr>
-</tr>
-</table>
+                </tr>
 
 
 
 
-	  
-
-</form>
 
 
-</td>
-</tr>
-</table>
+                <tr><td>
+                Travelling Date: </td> <td align="left"> <input type="date" name="going" onchange="verify();"><br></td> </tr>
+
+                <tr> <td>
+                Returning Date:  </td> <td align="left"> <input type="date" name="returning" onchange="verify();"><br>
+                </td>
+                </tr>
+
+                <tr><td>
+                Passenger Medical Information:  </td><td align="left"><textarea name="Comments" rows="3" cols="30" onchange="verify();">
+                          </textarea><br>
+                </td></tr>	
+
+                       <tr> <td align="right">
+                     <input type="submit" id="buttonNormal" value="Send data" onclick="return putdata();">
+                 <input type="reset" id="buttonNormal" value="Clear" onclick="return putdata();">
+                </td></tr>
+                </tr>
+                </table>
+            </div><!-- div02 ends -->
+            
+            </form>
 
 
-
-
- 
-                <!-- section content goes here --> 
-                
-                
-                
-                
-                
-                
-                
-    
+            </td>
+            </tr>
+            </table>
             </div><!-- section ends --> 
             
 
