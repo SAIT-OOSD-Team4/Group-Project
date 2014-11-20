@@ -148,34 +148,112 @@ function putdata()
                
 
 
-<table border="3" align="center">
+<table border="5">
 <tr>
 <td>
-<!--  <img src="flowers-3.jpg">  -->
+<!----<img src="flowers-3.jpg"> ---> 
 </td>
 <td>
-<form name="stuff" method="get" action="bounce.htm" onsubmit="return edit_all();">
+<form name="stuff" method="post" action="addcust.php" onsubmit="return edit_all();">
 <table>
+<tr>
+<td align="right">
+Flight: <input type="checkbox" name="flight"><br>
+</td>
+
+<td align="left">
+Flight + Hotel: <input type="checkbox" name="fligt+hotel"><br>
+</td>
+
+<tr></tr>
+<td align="right">
+Cruise: <input type="checkbox" name="cruise"><br>
+</td>
+
+
+
+<td align="left">
+Cruise + Hotel : <input type="checkbox" name="cruise+hotel"><br>
+</td>
+
+</tr>
+<tr>
+<td align="right">
+Rentals: <input type="checkbox" name="rentals"><br>
+</td>
+<td align="left">
+Extras: <input type="checkbox" name="rentals"><br>
+</td>
+
+</tr>
+</tr>
+<tr>
+<td align="right">Travelling From:</td>
+<td>
+<input type="text" name="from" size="30" maxlength="30" onchange="from();"> </td></tr>
+
+<tr>
+<td align="right">Travelling To:</td>
+<td>
+<input type="text" name="to" size="30" maxlength="30" onchange="to();"> </td></tr>
+
+
+
+
+
 <tr>
 <td align="right">First Name:</td>
 <td>
-<input type="text" name="FirstName" size="30" maxlength="30" onchange="firstname();"> </td></tr>
+<input type="text" name="CustFirstName" size="30" maxlength="30" onchange="firstname();"> </td></tr>
 
 <tr>
 <td>Last Name :</td>
-<td> <input type="text" name="LastName" size="30" maxlength="30" onchange="lastname();"> </td>
+<td> <input type="text" name="CustLastName" size="30" maxlength="30" onchange="lastname();"> </td>
+</tr>
+
+<tr>
+<td>Address :</td>
+<td> <input type="text" name="CustAddress" size="30" maxlength="30" onchange="lastname();"> </td>
+</tr>
+
+<tr>
+<td>City :</td>
+<td> <input type="text" name="CustCity" size="30" maxlength="30" onchange="lastname();"> </td>
+</tr>
+
+<tr>
+<td>Province :</td>
+<td> <input type="text" name="CustProv" size="30" maxlength="30" onchange="lastname();"> </td>
+</tr>
+
+<tr>
+<td>Postal Code:</td>
+<td> <input type="text" name="CustPostal" size="30" maxlength="30" onchange="verify();"></td>
+</tr>
+
+<tr>
+<td>Country :</td>
+<td> <input type="text" name="CustCountry" size="30" maxlength="30" onchange="lastname();"> </td>
 </tr>
 
 <tr>
 <td>Phone number:</td>
-<td> <input type="text" name="Phone" size="30" maxlength="30" onchange="check_phone();"> </td>
+<td> <input type="text" name="CustHomePhone" size="30" maxlength="30" onchange="check_phone();"> </td>
 </tr>
-<td>Postal Code:</td>
-<td> <input type="text" name="Postal Code" size="30" maxlength="30" onchange="verify();"></td>
 
 <tr>
-<td>Agency :</td>
-<td> <input type="text" name="Agency" size="30" maxlength="30" onchange="agency();"> </td>
+<td>Business number:</td>
+<td> <input type="text" name="CustBusPhone" size="30" maxlength="30" onchange="check_phone();"> </td>
+</tr>
+
+<tr>
+<td>E-mail:</td>
+<td> <input type="text" name="CustEmail" size="30" maxlength="30" onchange="check_phone();"> </td>
+</tr>
+
+<tr>
+<td>Agent :</td>
+<td> <input type="text" name="AgentId" size="30" maxlength="30" onchange="agency();"> </td>
 </tr>
 
 
@@ -185,57 +263,66 @@ function putdata()
 </tr>
 
 <tr>
-				<td><u>Payment Method:Type of Card</u></td>
+				<td>Payment Method:Type of Card</td>
 				</tr>
-				<tr align="center">
-				<td colspan="2"><input type="radio" name="American Express">
+				<tr>
+				<td align="right"><input type="radio" name="American Express">
 				<img src="amex.gif">
 				</td>
 			
-				<td colspan="2"><input type="radio" name="Discover"> 	
+				<td align="left"><input type="radio" name="Discover"> 	
 				<img src="discover.jpg">
-                      		</td>
-
-				<td colspan="2"><input type="radio" name="Mastercard">
+                      		</td> 
+                 <tr>
+				<td align="right"><input type="radio" name="Mastercard">
 				<img src="mastercard.gif">
 	                        </td>
 
-				<td colspan="2"><input type="radio" name="Visa"> 
+				<td align="left"><input type="radio" name="Visa"> 
 				<img src="visa.gif">
-				
+				</tr>
 	                        </td>
 				</tr>
+				
+<tr>				
+				
+						<tr>
+<td>How Did You Hear About Us :</td>
+<td align="left"> <select name="Reference" onchange="verify();">
+             <option selected>Family/Friend</option>
+             <option>Other</option> </td>
+</tr>
+						
+						
+						
+						
 
-Flight: <input type="checkbox" name="flight"><br>
 
+<tr><td>
+Travelling Date: </td> <td align="left"> <input type="date" name="going" onchange="verify();"><br></td> </tr>
 
-Flight + Hotel: <input type="checkbox" name="fligt+hotel"><br>
+<tr> <td>
+Returning Date:  </td> <td align="left"> <input type="date" name="returning" onchange="verify();"><br>
+</td>
+</tr>
 
+<tr><td>
+Passenger Medical Information:  </td><td align="left"><textarea name="Comments" rows="3" cols="30" onchange="verify();">
+          </textarea><br>
+</td></tr>	
 
-Cruize: <input type="checkbox" name="cruize"><br>
-
-
-Cruize + Hotel : <input type="checkbox" name="cruize+hotel"><br>
-
-Rentals: <input type="checkbox" name="rentals"><br>
-
+       <tr> <td align="right">
+	 <input type="submit" id="buttonNormal" value="Send data" onclick="return putdata();">
+ <input type="reset" id="buttonNormal" value="Clear" onclick="return putdata();">
+</td></tr>
 </tr>
 </table>
 
-How Did You Hear About Us: <select name="Reference" onchange="verify();">
-             <option selected>Family/Friend</option>
-             <option>Other</option>
-        </select><br>
-Travelling Date: <input type="date" name="Start" onchange="verify();"><br>
 
-Returning Date: <input type="date" name="Start" onchange="verify();"><br>
 
-<center>
-Passenger Medical Information: <textarea name="Comments" rows="3" cols="30" onchange="verify();">
-          </textarea><br>
-<input type="submit" id="buttonNormal" value="Send data" onclick="return putdata();">
-<input type="reset" id="buttonNormal" value="Clear" onclick="return putdata();">
-</center>
+
+	  
+
 </form>
 
 
@@ -270,6 +357,13 @@ Passenger Medical Information: <textarea name="Comments" rows="3" cols="30" onch
             
             
         </div> <!-- header ends -->  
+		
+		
+		
+		
+		
+		<!----- SQL  Stuuf on addcust.php------>
+	
 		
 		
 		
