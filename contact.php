@@ -52,15 +52,23 @@
                 //Agency 1 Info
                    $sql = "select * from agencies where `AgencyId`= 1";
                    $result = mysqli_query($link, $sql) or die("SQL Error");
-
+				   
+				   $datatableName = ["Agency ID","Agency Name","blah","blah","blah","blah","blah","blah"];
                    $datatable = "<table>";
                    while($row = mysqli_fetch_assoc($result))
                    {
 
                       $datatable .= "<tr>";
+					  $i=0;
                       foreach ($row as $col)
+					  
                       {
+<<<<<<< HEAD
                          $datatable .= "<tr><td>$col</td></tr>";
+=======
+                         $datatable .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
+						 inc $i;
+>>>>>>> origin/master
                       }
 
                       $datatable .= "</tr>";
