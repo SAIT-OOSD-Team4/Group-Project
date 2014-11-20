@@ -55,6 +55,8 @@
 				   
 				   $datatableName = ["Agency ID:","Address:","City:","Province:","Zip Code:","Country:","Phone:","Fax:"];
                    $datatable = "<table>";
+				   
+					
                    while($row = mysqli_fetch_assoc($result))
                    {
 
@@ -140,6 +142,9 @@
 
                     //Print All tables
                    print("<div02>");
+				   print("<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.938799183043!2d-113.95701509999998
+                    !3d51.1280369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716396a144185b%3A0x5d12075c7d64e9d!2s65+Saddlecreek+Crescent+
+					NE%2C+Calgary%2C+AB+T3J+4R9!5e0!3m2!1sen!2sca!4v1416524598665" width="600" height="450" frameborder="0" style="border:0"></iframe>");
                    print("<u>Agency Info:</u>");
                    print($datatable);
                    print("<u>Agents Info:</u>");
