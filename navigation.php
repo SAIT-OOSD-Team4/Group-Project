@@ -26,7 +26,7 @@
                 <td><a href="register.php" id="buttonNav">Register</a></td>
                 <td><a href="packages.php" id="buttonNav">Packages</a></td>
                 <td><a href="order.php" id="buttonNav">Order</a></td>
-                <td>
+                <td style="float:right;">
                     <!--list displaying additional links-->
                     <ul id="sddm">
                         <li><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">MyTravel</a>

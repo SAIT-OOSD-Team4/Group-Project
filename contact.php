@@ -53,7 +53,7 @@
                    $sql = "select * from agencies where `AgencyId`= 1";
                    $result = mysqli_query($link, $sql) or die("SQL Error");
 				   
-				   $datatableName = ["Agency ID","Agency Name","blah","blah","blah","blah","blah","blah"];
+				   $datatableName = ["Agency ID:","Address:","City:","Province:","Zip Code:","Country:","Phone:","Fax:"];
                    $datatable = "<table>";
                    while($row = mysqli_fetch_assoc($result))
                    {
@@ -63,8 +63,15 @@
                       foreach ($row as $col)
 					  
                       {
+<<<<<<< HEAD
                          $datatable .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
 						 inc $i;
+=======
+
+                         $datatable .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
+						 $i++;
+
+>>>>>>> 29549a34df92d85837645a72a65df89ce1ec3d2e
                       }
 
                       $datatable .= "</tr>";
@@ -80,9 +87,17 @@
                    {
 
                       $datatable0 .= "<tr>";
+            $i=0;
                       foreach ($row as $col)
+            
                       {
+<<<<<<< HEAD
                          $datatable0 .= "<tr>$col</tr>";
+=======
+
+                         $datatable0 .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
+             $i++;
+>>>>>>> 29549a34df92d85837645a72a65df89ce1ec3d2e
                       }
                       $datatable0 .= "</tr>";
                    }

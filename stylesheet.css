@@ -15,8 +15,8 @@ body {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: 100%;
     font-family: 'Poiret One', cursive;
+    background-size: 100%;
     text-align: center; 
     font-size: 19px;
     color: white;  
@@ -42,12 +42,12 @@ h2 {
 h3 {
     background-color:rgba(1,1,1,0.5);
     font-family: 'Poiret One', cursive;
-    color: white;
     text-align: right; 
     font-size: 15px;
     padding: 20px;
     border: 0px;
     margin: 0;
+    color: white;
 }
 h4 {
     /*for green accent*/
@@ -89,7 +89,6 @@ div03 {
     float:left;
 }
 
-   
 /*classes for sections on the pages*/
 #wrap {
     background-color:transparent;
@@ -177,7 +176,7 @@ div03 {
     height: 35px;
     width: 150px;
     overflow: hidden;
-    display: block;
+    display:block;
     text-decoration: none;
     font-weight:bolder;
 }
@@ -241,7 +240,6 @@ div03 {
 {	margin: 0;
 	padding: 0;
 	z-index: 30;
-    vertical-align: text-bottom;
 }
 
 #sddm li {
@@ -251,7 +249,6 @@ div03 {
 	padding: 0;
 	list-style: none;
 	float: left;
-    vertical-align: text-bottom;
 }
 
 #sddm li a
@@ -265,12 +262,10 @@ div03 {
 	text-align: center;
 	text-decoration: none;
     width:150px;
-    vertical-align: text-bottom;
 }
 
 #sddm li a:hover{
     background: rgba(1,1,1,0.5);/*bg for tapped main button*/
-    vertical-align: text-bottom;
 }
 
 #sddm div
@@ -279,7 +274,6 @@ div03 {
 	margin: 0;
 	padding: 0;
 	background:rgba(1,1,1,0.5);
-    vertical-align: text-bottom;
 }
 
 #sddm div a{
@@ -298,13 +292,11 @@ div03 {
     background: lightgray;
     color: black;
     font-size: 13px;
-    vertical-align: text-bottom;
 }
 
 #sddm div a:hover{
     background: rgba(1,1,1,0.2);
     color:#99CC00;
-    vertical-align: text-bottom;
 }
 
 
