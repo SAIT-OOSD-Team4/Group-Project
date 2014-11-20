@@ -98,7 +98,7 @@
                       $datatable1 .= "<tr>";
                       foreach ($row as $col)
                       {
-                         $datatable1 .= "<td>$col</td>";
+                         $datatable1 .= "<td><tr>$col</tr></td>";
                       }
 
                       $datatable1 .= "</tr>";
