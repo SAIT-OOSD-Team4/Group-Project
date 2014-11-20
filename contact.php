@@ -60,7 +60,7 @@
                       $datatable .= "<tr>";
                       foreach ($row as $col)
                       {
-                         $datatable .= "<tr>$col</tr>";
+                         $datatable .= "<tr><td>$col</td></tr>";
                       }
 
                       $datatable .= "</tr>";
@@ -78,7 +78,7 @@
                       $datatable0 .= "<tr>";
                       foreach ($row as $col)
                       {
-                         $datatable0 .= "<tr>$col</tr>";
+                         $datatable0 .= "<tr><td>$col</td></tr>";
                       }
                       $datatable0 .= "</tr>";
                    }
