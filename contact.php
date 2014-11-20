@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="stylesheet.css"><!--css stylesheet-->
         <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
         
-        <title>Contact us</title>
+        <title>Contact Us</title>
              
     </head>
 
