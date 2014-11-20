@@ -1,5 +1,8 @@
 <!--
-Order Page Jasmeen Kathuria 
+Student:Jasmeen Kathuria 
+Course Module: CPRG210
+Date: October 30,2014
+Assignment: Project Workshop 1 
 -->
 
 <!DOCTYPE html>
@@ -13,8 +16,6 @@ Order Page Jasmeen Kathuria
         
         <title>Main Page</title>
              
-   
-
 <!-----Form Javascript --------->
 <script language="javascript">
 
@@ -32,8 +33,6 @@ function putdata()
 				return false;
 			}
 		}
-		
-		
 		
 		function edit_all()
 			{
@@ -141,128 +140,131 @@ function putdata()
                 
             </div><!-- nav ends --> 
             
-        
+            <div id="sideNav"><!-- sideNav starts --> 
+                <!-- sideNav content goes here --> 
+                <?php
+                    include("sideNavigation.php");
+                ?>
+            </div><!-- sideNav ends --> 
             
 
             <div id="section"><!-- section starts -->
-               
 
+                <table border="5">
+                <tr>
+                <td>
+                <!----<img src="flowers-3.jpg"> ---> 
+                </td>
+                <td>
+                <form name="stuff" method="post" action="addcust.php" onsubmit="return edit_all();">
+                <table>
+                <tr>
+                <td align="right">
+                Flight: <input type="checkbox" name="flight"><br>
+                </td>
 
-<table border="5">
-<tr>
-<td>
-<!----<img src="flowers-3.jpg"> ---> 
-</td>
-<td>
-<form name="stuff" method="post" action="addcust.php" onsubmit="return edit_all();">
-<table>
-<tr>
-<td align="right">
-Flight: <input type="checkbox" name="flight"><br>
-</td>
+                <td align="left">
+                Flight + Hotel: <input type="checkbox" name="fligt+hotel"><br>
+                </td>
 
-<td align="left">
-Flight + Hotel: <input type="checkbox" name="fligt+hotel"><br>
-</td>
-
-<tr></tr>
-<td align="right">
-Cruise: <input type="checkbox" name="cruise"><br>
-</td>
+                <tr></tr>
+                <td align="right">
+                Cruise: <input type="checkbox" name="cruise"><br>
+                </td>
 
 
 
-<td align="left">
-Cruise + Hotel : <input type="checkbox" name="cruise+hotel"><br>
-</td>
+                <td align="left">
+                Cruise + Hotel : <input type="checkbox" name="cruise+hotel"><br>
+                </td>
 
-</tr>
-<tr>
-<td align="right">
-Rentals: <input type="checkbox" name="rentals"><br>
-</td>
-<td align="left">
-Extras: <input type="checkbox" name="rentals"><br>
-</td>
+                </tr>
+                <tr>
+                <td align="right">
+                Rentals: <input type="checkbox" name="rentals"><br>
+                </td>
+                <td align="left">
+                Extras: <input type="checkbox" name="rentals"><br>
+                </td>
 
-</tr>
-</tr>
-<tr>
-<td align="right">Travelling From:</td>
-<td>
-<input type="text" name="from" size="30" maxlength="30" onchange="from();"> </td></tr>
+                </tr>
+                </tr>
+                <tr>
+                <td align="right">Travelling From:</td>
+                <td>
+                <input type="text" name="from" size="30" maxlength="30" onchange="from();"> </td></tr>
 
-<tr>
-<td align="right">Travelling To:</td>
-<td>
-<input type="text" name="to" size="30" maxlength="30" onchange="to();"> </td></tr>
+                <tr>
+                <td align="right">Travelling To:</td>
+                <td>
+                <input type="text" name="to" size="30" maxlength="30" onchange="to();"> </td></tr>
 
 
 
 
 
-<tr>
-<td align="right">First Name:</td>
-<td>
-<input type="text" name="CustFirstName" size="30" maxlength="30" onchange="firstname();"> </td></tr>
+                <tr>
+                <td align="right">First Name:</td>
+                <td>
+                <input type="text" name="CustFirstName" size="30" maxlength="30" onchange="firstname();"> </td></tr>
 
-<tr>
-<td>Last Name :</td>
-<td> <input type="text" name="CustLastName" size="30" maxlength="30" onchange="lastname();"> </td>
-</tr>
+                <tr>
+                <td>Last Name :</td>
+                <td> <input type="text" name="CustLastName" size="30" maxlength="30" onchange="lastname();"> </td>
+                </tr>
 
-<tr>
-<td>Address :</td>
-<td> <input type="text" name="CustAddress" size="30" maxlength="30" onchange="lastname();"> </td>
-</tr>
+                <tr>
+                <td>Address :</td>
+                <td> <input type="text" name="CustAddress" size="30" maxlength="30" onchange="lastname();"> </td>
+                </tr>
 
-<tr>
-<td>City :</td>
-<td> <input type="text" name="CustCity" size="30" maxlength="30" onchange="lastname();"> </td>
-</tr>
+                <tr>
+                <td>City :</td>
+                <td> <input type="text" name="CustCity" size="30" maxlength="30" onchange="lastname();"> </td>
+                </tr>
 
-<tr>
-<td>Province :</td>
-<td> <input type="text" name="CustProv" size="30" maxlength="30" onchange="lastname();"> </td>
-</tr>
+                <tr>
+                <td>Province :</td>
+                <td> <input type="text" name="CustProv" size="30" maxlength="30" onchange="lastname();"> </td>
+                </tr>
 
-<tr>
-<td>Postal Code:</td>
-<td> <input type="text" name="CustPostal" size="30" maxlength="30" onchange="verify();"></td>
-</tr>
+                <tr>
+                <td>Postal Code:</td>
+                <td> <input type="text" name="CustPostal" size="30" maxlength="30" onchange="verify();"></td>
+                </tr>
 
-<tr>
-<td>Country :</td>
-<td> <input type="text" name="CustCountry" size="30" maxlength="30" onchange="lastname();"> </td>
-</tr>
+                <tr>
+                <td>Country :</td>
+                <td> <input type="text" name="CustCountry" size="30" maxlength="30" onchange="lastname();"> </td>
+                </tr>
 
-<tr>
-<td>Phone number:</td>
-<td> <input type="text" name="CustHomePhone" size="30" maxlength="30" onchange="check_phone();"> </td>
-</tr>
+                <tr>
+                <td>Phone number:</td>
+                <td> <input type="text" name="CustHomePhone" size="30" maxlength="30" onchange="check_phone();"> </td>
+                </tr>
 
-<tr>
-<td>Business number:</td>
-<td> <input type="text" name="CustBusPhone" size="30" maxlength="30" onchange="check_phone();"> </td>
-</tr>
+                <tr>
+                <td>Business number:</td>
+                <td> <input type="text" name="CustBusPhone" size="30" maxlength="30" onchange="check_phone();"> </td>
+                </tr>
 
-<tr>
-<td>E-mail:</td>
-<td> <input type="text" name="CustEmail" size="30" maxlength="30" onchange="check_phone();"> </td>
-</tr>
+                <tr>
+                <td>E-mail:</td>
+                <td> <input type="text" name="CustEmail" size="30" maxlength="30" onchange="check_phone();"> </td>
+                </tr>
 
-<tr>
-<td>Agent :</td>
-<td> <input type="text" name="AgentId" size="30" maxlength="30" onchange="agency();"> </td>
-</tr>
+                <tr>
+                <td>Agent :</td>
+                <td> <input type="text" name="AgentId" size="30" maxlength="30" onchange="agency();"> </td>
+                </tr>
 
 
-<tr>
-<td>Credit Card Number:</td>
-<td> <input type="text" name="credit" size="30" maxlength="30" onchange="credit();"> </td>
-</tr>
+                <tr>
+                <td>Credit Card Number:</td>
+                <td> <input type="text" name="credit" size="30" maxlength="30" onchange="credit();"> </td>
+                </tr>
 
-<tr>
+                <tr>
 				<td>Payment Method:Type of Card</td>
 				</tr>
 				<tr>

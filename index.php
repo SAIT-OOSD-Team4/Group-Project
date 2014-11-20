@@ -51,12 +51,10 @@ Jasmeen Kathuria & Leisy Moliner
             </div><!-- nav ends --> 
             
             <div id="sideNav"><!-- sideNav starts --> 
-                
                 <!-- sideNav content goes here --> 
                 <?php
                     include("sideNavigation.php");
                 ?>
-                
             </div><!-- sideNav ends --> 
             
 
