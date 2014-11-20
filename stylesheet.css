@@ -235,7 +235,9 @@ div03 {
 #sddm
 {	margin: 0;
 	padding: 0;
-	z-index: 30}
+	z-index: 30;
+    vertical-align: text-bottom;
+}
 
 #sddm li {
     font-family: 'Poiret One', cursive;
@@ -244,6 +246,7 @@ div03 {
 	padding: 0;
 	list-style: none;
 	float: left;
+    vertical-align: text-bottom;
 }
 
 #sddm li a
@@ -257,10 +260,12 @@ div03 {
 	text-align: center;
 	text-decoration: none;
     width:150px;
+    vertical-align: text-bottom;
 }
 
 #sddm li a:hover{
     background: rgba(1,1,1,0.5);/*bg for tapped main button*/
+    vertical-align: text-bottom;
 }
 
 #sddm div
@@ -269,6 +274,7 @@ div03 {
 	margin: 0;
 	padding: 0;
 	background:rgba(1,1,1,0.5);
+    vertical-align: text-bottom;
 }
 
 #sddm div a{
@@ -287,11 +293,13 @@ div03 {
     background: lightgray;
     color: black;
     font-size: 13px;
+    vertical-align: text-bottom;
 }
 
 #sddm div a:hover{
     background: rgba(1,1,1,0.2);
     color:#99CC00;
+    vertical-align: text-bottom;
 }
 
 

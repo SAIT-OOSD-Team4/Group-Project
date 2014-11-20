@@ -63,10 +63,10 @@
             <div id="section"><!-- section starts -->
                 
                 <!-- section content goes here --> 
-                <br/><br/><br/><br/>
+                <br/><br/><br/><br/><br/>
                 <h4 style="color:black;">Explore Destinations</h4>
                 <hr style="border-color:black;"/>
-                <br/>
+            
                 <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
                 <div id="wowslider-container1">
                     <div class="ws_images"><ul>
