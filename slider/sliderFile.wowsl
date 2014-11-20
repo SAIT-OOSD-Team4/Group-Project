@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>7.2</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <AutoPlayVideo>false</AutoPlayVideo>
+            <Captions>true</Captions>
+            <CaptionsEffect>parallax</CaptionsEffect>
+            <Controls>true</Controls>
+            <FullScreen>false</FullScreen>
+            <GalleryName>sliderFile</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>glass_parallax</ImageEffect>
+            <ImageFillColor>#000000</ImageFillColor>
+            <ImageHeight>360</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/megalopolis/</ImageTemplate>
+            <ImageTemplateName>Megalopolis</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/wamp/www/Project Workshop1/Group-Project/slider/slider.html</PublishFileName>
+            <PublishIndex>slider.html</PublishIndex>
+            <PublishPath>C:/wamp/www/Project Workshop1/Group-Project/slider</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>1</ShowBullets>
+            <ShowControls>false</ShowControls>
+            <ShowTooltips>1</ShowTooltips>
+            <SizeStyle>1</SizeStyle>
+            <SlideshowDelay>20</SlideshowDelay>
+            <SlideshowDuration>20</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <SwipeSupport>2</SwipeSupport>
+            <TemplateFont>Tenor Sans</TemplateFont>
+            <TemplateName>megalopolis</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>false</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>0</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/01.jpg</url>
+                <title>01</title>
+                <filesize>90369</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/02.jpg</url>
+                <title>02</title>
+                <filesize>37470</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/03.jpg</url>
+                <title>03</title>
+                <filesize>88164</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/04.jpg</url>
+                <title>04</title>
+                <filesize>56258</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/05.jpg</url>
+                <title>05</title>
+                <filesize>33466</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/06.jpg</url>
+                <title>06</title>
+                <filesize>401807</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/07.jpg</url>
+                <title>07</title>
+                <filesize>55014</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/08.jpg</url>
+                <title>08</title>
+                <filesize>39097</filesize>
+            </Image>
+            <Image>
+                <url>C:/Users/677958/Desktop/slider1/data1/images/09.jpg</url>
+                <title>09</title>
+                <filesize>108463</filesize>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

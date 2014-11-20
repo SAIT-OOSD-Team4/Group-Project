@@ -25,7 +25,7 @@ var today = new Date();
 Student:Leisy Moliner Hernandez
 Course Module: CPRG210
 Date: October 30,2014
-Assignment: Project Workshop HTML/CSS/Javascript 
+Assignment: Project Workshop1
 */
 //Arrays
 
@@ -88,7 +88,7 @@ var desc=["Customer Login",
           "Register"];
 
 //Array for link on nav bar
-var urlImages =["login/index.php",
+var urlPages =["login/index.php",
                 "register.php",
                 "register.php"];
 
@@ -101,7 +101,7 @@ function dropDownMenu()
     for (x=0; x<3; x++)
     { 
         //Code for rows 
-        info=info+"<tr>"+"<a href="+urlImages[x]+">"+desc[x]+"</a></tr>";
+        info=info+"<tr>"+"<a href="+urlPages[x]+">"+desc[x]+"</a></tr>";
     }
     info=info+"</table>";
     nationalDestinations.innerHTML=info;
