@@ -151,7 +151,7 @@ function putdata()
 <table border="3" align="center">
 <tr>
 <td>
-<img src="travel4.jpg">
+<!--  <img src="flowers-3.jpg">  -->
 </td>
 <td>
 <form name="stuff" method="get" action="bounce.htm" onsubmit="return edit_all();">
@@ -173,11 +173,38 @@ function putdata()
 <td>Postal Code:</td>
 <td> <input type="text" name="Postal Code" size="30" maxlength="30" onchange="verify();"></td>
 
+<tr>
+<td>Agency :</td>
+<td> <input type="text" name="Agency" size="30" maxlength="30" onchange="agency();"> </td>
+</tr>
+
 
 <tr>
 <td>Credit Card Number:</td>
 <td> <input type="text" name="credit" size="30" maxlength="30" onchange="credit();"> </td>
 </tr>
+
+<tr>
+				<td><u>Payment Method:Type of Card</u></td>
+				</tr>
+				<tr align="center">
+				<td colspan="2"><input type="radio" name="American Express">
+				<img src="amex.gif">
+				</td>
+			
+				<td colspan="2"><input type="radio" name="Discover"> 	
+				<img src="discover.jpg">
+                      		</td>
+
+				<td colspan="2"><input type="radio" name="Mastercard">
+				<img src="mastercard.gif">
+	                        </td>
+
+				<td colspan="2"><input type="radio" name="Visa"> 
+				<img src="visa.gif">
+				
+	                        </td>
+				</tr>
 
 Flight: <input type="checkbox" name="flight"><br>
 
@@ -192,7 +219,6 @@ Cruize + Hotel : <input type="checkbox" name="cruize+hotel"><br>
 
 Rentals: <input type="checkbox" name="rentals"><br>
 
-<td>Agency<input type="text" name="Agency # size="30" maxlength="30" onchange="agency();" </td>
 </tr>
 </table>
 

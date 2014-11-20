@@ -50,3 +50,56 @@ function compare_dates($dateDB)
 }  // end function 
 
 ?>
+
+
+
+<?php
+//Jasmeen Kathuria
+// This Code is linked to the Order Page (order.php)
+    
+    //(“INSERT” SQL statement) 
+    function addcust($addcustdata)
+    {   
+        $sql = "INSERT INTO customers values (NULL, '$addcustdata[CustFirstName]',
+        '$addcustdata[CustLastName]', '$addcustdata[CustAddress]','$addcustdata[CustCity]',
+        '$addcustdata[CustProv]', '$addcustdata[CustPostal]', '$addcustdata[CustCountry]', '$addcustdata[CustHomePhone]',
+        '$addcustdata[CustEmail]', '$addcustdata[CustBusPhone]', '$addcustdata[CustPassword]', '$addcustdata[AgentId]')";
+        
+        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
+        
+        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
+      
+        mysqli_close($link);
+        return $result;
+    }
+	
+	
+	
+	
+	function addbooking($booking)
+    {   
+        $sql = "INSERT INTO customers values (NULL, '$addbooking[from]',
+        '$addcustdata[to]', '$addcustdata[going]','$addcustdata[returning]')";
+        
+        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
+        
+        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
+      
+        mysqli_close($link);
+        return $result;
+    }
+	
+	
+	
+	
+	
+?>
+
+
+
+
+
+
+
+
+
