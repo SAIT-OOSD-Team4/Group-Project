@@ -63,15 +63,13 @@
                       foreach ($row as $col)
 					  
                       {
-<<<<<<< HEAD
+
                          $datatable .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
 						 inc $i;
-=======
 
                          $datatable .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
 						 $i++;
 
->>>>>>> 29549a34df92d85837645a72a65df89ce1ec3d2e
                       }
 
                       $datatable .= "</tr>";
@@ -91,13 +89,12 @@
                       foreach ($row as $col)
             
                       {
-<<<<<<< HEAD
                          $datatable0 .= "<tr>$col</tr>";
-=======
+
 
                          $datatable0 .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
              $i++;
->>>>>>> 29549a34df92d85837645a72a65df89ce1ec3d2e
+
                       }
                       $datatable0 .= "</tr>";
                    }
