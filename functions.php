@@ -27,7 +27,7 @@ Assignment: CPRG210 - Web Application Concepts
 ?>
 
 
-//=======
+
 <?php
 // Darcie Milliken
 // November 12 2014
