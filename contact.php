@@ -65,9 +65,6 @@
                       {
 
                          $datatable .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
-						 inc $i;
-
-                         $datatable .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
 						 $i++;
 
                       }
@@ -89,12 +86,9 @@
                       foreach ($row as $col)
             
                       {
-                         $datatable0 .= "<tr>$col</tr>";
-
 
                          $datatable0 .= "<tr><td>$datatableName[$i]</td><td>$col</td></tr>";
              $i++;
-
                       }
                       $datatable0 .= "</tr>";
                    }
