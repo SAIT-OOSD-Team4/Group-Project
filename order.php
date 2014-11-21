@@ -140,14 +140,6 @@ function putdata()
                 
             </div><!-- nav ends --> 
             
-            <div id="sideNav"><!-- sideNav starts --> 
-                <!-- sideNav content goes here --> 
-                <?php
-                    include("sideNavigation.php");
-                ?>
-            </div><!-- sideNav ends --> 
-            
-
             <div id="section"><!-- section starts -->
                 
                 <form name="stuff" method="post" action="addcust.php" onsubmit="return edit_all();">
@@ -275,7 +267,20 @@ function putdata()
                 
             </div><!-- section ends --> 
             
-
+            <div id="sideNav"><!-- sideNav starts --> 
+              
+                <div03 style="padding:20px; float:left;">
+                    <!--Reload the form and display error message if found-->
+                    <h3>Please complete every field</h3><br/>
+                    <?php
+                    if (isset($_SESSION['errorMessage']))
+                    {
+                        echo $_SESSION['errorMessage'];
+                    }
+                    ?>
+                </div03>
+            </div><!-- sideNav ends -->
+            
             <div id="footer"><!-- footer starts --> 
                 <!-- footer content goes here --> 
                 <?php
