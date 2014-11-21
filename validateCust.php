@@ -60,7 +60,7 @@ Assignment: CPRG210 - Web Application Concepts
         //validating agent phone number
         if (empty($_REQUEST['CustHomePhone']))
         {
-            $message .="You must enter a phone number<br/>";
+            $message .="Enter a home phone number<br/>";
         }
         else 
         {
@@ -73,7 +73,7 @@ Assignment: CPRG210 - Web Application Concepts
         //validating agent phone number
         if (empty($_REQUEST['CustBusPhone']))
         {
-            $message .="You must enter a phone number<br/>";
+            $message .="Enter a business phone number<br/>";
         }
         else 
         {
@@ -114,7 +114,7 @@ Assignment: CPRG210 - Web Application Concepts
             {
                 $_SESSION['enterCustomer'] ="Not able to save the data";
             }
-            header("Location:register.php");
+            header("Location:index.php");
         }
     }
 ?>
