@@ -5,6 +5,15 @@ Date: October 30,2014
 Assignment: Project Workshop 1 
 -->
 
+<?php
+    session_start();
+    if (!isset($_SESSION['loggedin']))
+    {
+        $_SESSION['pagename'] = 'order.php';
+        //header("Location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
