@@ -1,13 +1,12 @@
+<!----- Leisy Moliner & Jasmeen Kathuria----->
+
+
 <!DOCTYPE html>
 <html>
 
     <head>
 			<!--- Social Media Icons Code --->
-			<script type="text/javascript">var switchTo5x=true;</script>
-			<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-			<script type="text/javascript">
-                stLight.options({publisher: "c4a76f89-6db1-4c45-9422-6eb5b519304d", doNotHash: false, doNotCopy: false, hashAddressBar: false});
-            </script>
+			
 			<!----- Social Media Icons Code Ends -------->
 	</head>
     <body>
@@ -24,12 +23,8 @@
                 -->
 				
 				<!-- Social Media Icons Code  -->
-				<span class='st_sharethis_large' displayText='ShareThis'></span>
-				<span class='st_facebook_large' displayText='Facebook'></span>
-				<span class='st_twitter_large' displayText='Tweet'></span>
-				<span class='st_linkedin_large' displayText='LinkedIn'></span>
-				<span class='st_pinterest_large' displayText='Pinterest'></span>
-				<span class='st_email_large' displayText='Email'></span>
+				<object width='217' height='32'><embed src='http://www.socialbuttonmaker.com/Swfs/f47f44cb-3e12-4fc8-ba03-1b5bb6de91a7/button.swf' type='application/x-shockwave-flash' width='217' height='32' loop='false' wmode='transparent'><noscript><a href='http://soccerisland.info/'>soccer island</a></noscript></embed><img src='' width=0 height=0 id='flashbutton'/><script type='text/javascript' src='http://www.socialbuttonmaker.com/Scripts/FlashButton.js'></script></object>
+			
 				<!-- Social Media Icons Code Ends -->
     </body>
 </html>
