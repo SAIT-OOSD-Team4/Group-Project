@@ -1,5 +1,5 @@
 <!--
-Student:Leisy Moliner Hernandez
+Student:Jose Marcano & Leisy Moliner Hernandez
 Course Module: CPRG210
 Date: Nov 10,2014
 Assignment: CPRG210 - Web Application Concepts
@@ -105,10 +105,11 @@ Assignment: CPRG210 - Web Application Concepts
             header("Location:order.php");
         }
         else {
-            $result = insertCustomer($_REQUEST);
-            if ($result)
+            $result1 = insertCustomer($_REQUEST);
+			$result2 = insertBooking($_REQUEST);
+            if ($result1 & $result2)
             {
-                $_SESSION['enterCustomer'] ="Agent information submitted";
+                $_SESSION['enterCustomer'] ="Information submitted";
             }
             else
             {

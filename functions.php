@@ -24,6 +24,32 @@ Assignment: CPRG210 - Web Application Concepts
         mysqli_close($link);//close connection link  
         return $result;//return BOOL if inser was successful or not
     }
+	
+		function insertBooking($bookinginfo)
+		{
+		
+		$bookingDate = date("Y-m-d H:i:s");
+		$bookingNo= substr(str_shuffle(str_repeat('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', mt_rand(1,6))),1,6);
+		
+			$sql = "INSERT INTO bookings values
+			(NULL,
+			'$bookingDate',
+			'$bookingNo',
+			'$bookinginfo[Passengers],
+			'$bookinginfo[CustomerId],
+			'$bookinginfo[TripType],
+			'NULL'
+			)";
+
+        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
+        
+        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
+      
+        mysqli_close($link);//close connection link  
+        return $result;//return BOOL if insert was successful or not
+
+
+    }
 ?>
 
 
@@ -72,26 +98,6 @@ function compare_dates($dateDB)
         mysqli_close($link);
         return $result;
     }
-	
-	
-	
-	
-	function addbooking($booking)
-    {   
-        $sql = "INSERT INTO customers values (NULL, '$addbooking[from]',
-        '$addcustdata[to]', '$addcustdata[going]','$addcustdata[returning]')";
-        
-        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
-        
-        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
-        
-        mysqli_close($link);
-        return $result;
-    }
-	
-	
-	
-	
 	
 ?>
 
