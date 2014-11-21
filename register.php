@@ -164,12 +164,6 @@ Assignment: Project Workshop HTML/CSS/Javascript
                                 <td>
                                     <input type="reset" id="buttonNormal" style="float:right;" onclick="return confirm('Do you want to reset all?')">
                                 </td>
-                                <td>
-                                    <a href="index.php">
-                                    <input type="button" value="Home" id="buttonNormal"  style="float:right;"/>
-                                    </a>
-                                    <!--<img src="Images/home.png" alt="return home" style="width:100px; height:25px;"></a>-->
-                                </td>
                             </tr>
                         </table>
                     </div02>
@@ -179,7 +173,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
             
             <div id="sideNav"><!-- sideNav starts --> 
               
-                <div03 style="padding:20px; float:left;">
+                <div03 style="padding:10px; float:left;">
                     <!--Reload the form and display error message if found-->
                     <h3>Please complete every field</h3><br/>
                     <?php

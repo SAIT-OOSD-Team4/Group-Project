@@ -22,8 +22,8 @@
             <tr>
                 <td><a href="index.php" id="buttonNav">Home</a></td>
                 <td><a href="register.php" id="buttonNav">Register</a></td>
-                <td><a href="packages.php" id="buttonNav">Order</a></td>
-                <td><a href="contact.php" id="buttonNav">Contact Us</a></td>
+                <td><a href="packages.php" id="buttonNav">Destinations</a></td>
+                <td><a href="contact.php" id="buttonNav">About Us</a></td>
                 <td style="float:right;">
                     <!--list displaying additional links-->
                     <ul id="sddm">

@@ -269,7 +269,7 @@ function putdata()
             
             <div id="sideNav"><!-- sideNav starts --> 
               
-                <div03 style="padding:20px; float:left;">
+                <div03 style="padding:10px; float:left;">
                     <!--Reload the form and display error message if found-->
                     <h3>Please complete every field</h3><br/>
                     <?php

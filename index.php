@@ -14,15 +14,13 @@ Jasmeen Kathuria & Leisy Moliner
         <title>Main Page</title>
         
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Image carousel" />
+	    <meta name="description" content="Made with WOW Slider"/>
 	
-	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
-	<link rel="stylesheet" type="text/css" href="slider/engine1/style.css" />
-	<script type="text/javascript" src="slider/engine1/jquery.js"></script>
-	<!-- End WOWSlider.com HEAD section -->
-
-
-             
+        <!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+        <link rel="stylesheet" type="text/css" href="slider/engine1/style.css" />
+        <script type="text/javascript" src="slider/engine1/jquery.js"></script>
+        <!-- End WOWSlider.com HEAD section -->
+         
     </head>
 
     <body>
@@ -61,10 +59,15 @@ Jasmeen Kathuria & Leisy Moliner
             <div id="section"><!-- section starts -->
                 
                 <!-- section content goes here --> 
-                <br/><br/><br/><br/><br/>
-                <h4 style="color:black;">Explore Destinations</h4>
-                <hr style="border-color:black;"/>
-            
+                <br/>
+                <div02>
+                    <h2>our company</h2>
+                    <hr/>
+                    <p>Bavaria ipsum dolor sit amet at obandeln hoid, Eternal and three Dog. Sepp Wurscht fei hea Lewakaas ham called i.Maderln fensdaln mehra Gstanzl is the liab Xaver Auffisteign liberalitas Bavariae back of the mas is schee.
+                    </p>
+                </div02>
+                <br><br>
+                
                 <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
                 <div id="wowslider-container1">
                     <div class="ws_images"><ul>
@@ -95,24 +98,18 @@ Jasmeen Kathuria & Leisy Moliner
                     <script type="text/javascript" src="slider/engine1/wowslider.js"></script>
                     <script type="text/javascript" src="slider/engine1/script.js"></script>
 
-                <hr style="border-color:black;"/>
                 <!-- End WOWSlider.com BODY section -->
 
             </div><!-- section ends --> 
             
 
             <div id="footer"><!-- footer starts --> 
-                
                 <!-- footer content goes here --> 
                 <?php
                     include("footer.php");
                 ?>
-                
             </div><!-- footer ends --> 
-            
-            
-        </div> <!-- header ends -->  
-        
+        </div> <!-- wrap ends -->  
     </body>
 </html>
 

@@ -10,8 +10,7 @@
         <title>Navigation</title>
     </head>
     <body>
-        <!--<br /><h1>welcome to Travel Experts</h1>-->
-        <h2>our blog</h2>
+        <h2 style="text-align:left;">our blog</h2>
         <hr/>
         <div03>
            <?php @readfile('http://output31.rssinclude.com/output?type=php&id=937153&hash=c166fd231745e804fb5eadb0400dbf4d')?>
@@ -19,14 +18,14 @@
         
         <div03>
             <br />
-            <h2>reviews</h2>
+            <h2 style="text-align:left;">reviews</h2>
             <hr/>
             <p>Bavaria ipsum dolor sit amet at obandeln hoid, Eternal and three Dog. Sepp Wurscht fei hea Lewakaas ham called i.
                 <br/>
-                <i>"Darcie"</i></p>
+                <i>"David Murria"</i></p>
             <p>Maderln fensdaln mehra Gstanzl is the liab Xaver Auffisteign liberalitas Bavariae back of the mas is schee.
                 <br/>
-                <i>Jose</i></p>
+                <i>Jose Smith</i></p>
         </div03>
             
     </body>
