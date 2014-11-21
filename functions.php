@@ -25,6 +25,27 @@ Assignment: CPRG210 - Web Application Concepts
         return $result;//return BOOL if inser was successful or not
     }
 	
+	
+	//
+	//Insert customer without account info(pass&accName)
+	//
+	
+	    function insertCustomer2($customerdata)
+    {   
+        $sql = "INSERT INTO customers values (NULL, '$customerdata[CustFirstName]',
+        '$customerdata[CustLastName]', '$customerdata[CustAddress]','$customerdata[CustCity]',
+        '$customerdata[CustProv]', '$customerdata[CustPostal]', '$customerdata[CustCountry]', '$customerdata[CustHomePhone]',
+		'$customerdata[CustBusPhone]',
+        '$customerdata[CustEmail]',  NULL)";
+        
+        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
+        
+        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
+      
+        mysqli_close($link);//close connection link  
+        return $result;//return BOOL if inser was successful or not
+    }
+	
 		function insertBooking($bookinginfo)
 		{
 		

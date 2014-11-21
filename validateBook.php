@@ -105,7 +105,7 @@ Assignment: CPRG210 - Web Application Concepts
             header("Location:order.php");
         }
         else {
-            $result1 = insertCustomer($_REQUEST);
+            $result1 = insertCustomer2($_REQUEST);
 			$result2 = insertBooking($_REQUEST);
             if ($result1 & $result2)
             {
