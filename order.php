@@ -155,9 +155,26 @@ Assignment: Project Workshop 1
 							<tr>
 							<td>
                             Number of Passenger: 
-							<select name="Passengers">
+							<select name="Passengers" id="Passengers">
 							<option selected>1</option>
 							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							</select>
+							</td></tr>
+							
+							<tr>
+							<td>
+                            Trip Type: 
+							<select name="TripType" id="TripType">
+							<option selected>Leisure</option>
+							<option>Business</option>
+							<option>Group</option>
+							<option>Inter-Stellar</option>
 							</select>
 							</td></tr>
                         </table>
