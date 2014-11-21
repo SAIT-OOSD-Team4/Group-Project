@@ -45,7 +45,7 @@ Assignment: Project Workshop 1
             
             <div id="section"><!-- section starts -->
                 
-                <form name="registerBooking" action="validateCust.php">
+                <form name="registerBooking" action="validateBook.php">
                     <div02>
                         <h4><b>Product Selection</b></h4>
                         <hr><!-- Horizontal rule -->
