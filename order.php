@@ -165,7 +165,12 @@ Assignment: Project Workshop 1
                             <tr>
                                 <td align="right">Payment Method:Type of Card</td>
                             </tr>
-                            
+                            Number of Passenger: 
+							<select name="Passengers">
+							<option selected>1</option>
+							<option>2</option>
+							</select>
+							
                         </table>
                         
                         <table style="float:right; padding-right:10px;">
