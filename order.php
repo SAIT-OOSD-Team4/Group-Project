@@ -15,103 +15,6 @@ Assignment: Project Workshop 1
         <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
         
         <title>Main Page</title>
-             
-<!-----Form Javascript --------->
-<script language="javascript">
-
-function putdata()
-		{
-		
-			var x;
-			x=confirm('Are you sure you want to continue') 
-			if(x==true)
-			{
-				x='ok';
-			}
-			else
-			{
-				return false;
-			}
-		}
-		
-		function edit_all()
-			{
-				ok=true;
-				firstname();
-		        verify();
-				check_phone();
-				return ok;
-			}
-			
-		
-		<!-----First Name Code ----->
-		function name()
-		{
-	   //Name Data Has Been Entered
-        var x = document.forms["stuff"]["firstname"].value;
-         if (x == null || x == "") {
-        alert("Name must be filled out");
-        ok=false;
-          }
-	       }
-		   
-		   
-		   	//Last Name Code
-		function name()
-		{
-	   //Name Data Has Been Entered
-        var x = document.forms["stuff"]["firstname"].value;
-         if (x == null || x == "") {
-        alert("Name must be filled out");
-        ok=false;
-          }
-	       }
-		
-		
-		//Another Way to do Code
-		/*{
-		
-			var r=/^[A-Za-z]+$/;	
-			var x=document.stuff.name.value;
-			if(!r.test(x)) 
-			{alert('name is alphabetic only.....'); console.log(name); ok=false;}
-			
-		}	*/
-		
-		
-		
-		//Postal Code 
-		function verify()
-		{
-	   //Postal Code Has Been Entered
-        var x = document.forms["stuff"]["verify"].value;
-         if (x == null || x == "") 
-		 {
-        alert("Wrong Postal Code");
-        ok=false;
-          }
-	       }
-		
-		
-		//Phone 
-		function check_phone()
-		{
-	   //Phone Number Has Been Entered
-        var x = document.forms["stuff"]["check_phone"].value;
-         if (x == null || x == "") {
-        alert("Phone Number must be filled out");
-        ok=false;
-          }
-	       }
-
-	</script>
-<!-----Form Javascript ends ------>
-
-
-
-
-
-
 
     </head>
 
@@ -142,7 +45,7 @@ function putdata()
             
             <div id="section"><!-- section starts -->
                 
-                <form name="stuff" method="post" action="addcust.php" onsubmit="return edit_all();">
+                <form name="registerBooking" action="validateCust.php">
                     <div02>
                         <h4><b>Product Selection</b></h4>
                         <hr><!-- Horizontal rule -->
@@ -172,73 +75,73 @@ function putdata()
                         <table>
                             <tr>
                                 <td align="right">Travelling From:</td>
-                            <td><input type="text" name="from" size="30" maxlength="30" onchange="from();"> </td>
+                            <td><input type="text" name="from" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">Travelling To:</td>
                             <td>
-                                <input type="text" name="to" size="30" maxlength="30" onchange="to();"> </td>
+                                <input type="text" name="to" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">First Name:</td>
                             <td>
-                            <input type="text" name="CustFirstName" size="30" maxlength="30" onchange="firstname();"> </td></tr>
+                            <input type="text" name="CustFirstName" size="30" maxlength="30" > </td></tr>
 
                             <tr>
                                 <td align="right">Last Name :</td>
-                            <td> <input type="text" name="CustLastName" size="30" maxlength="30" onchange="lastname();"> </td>
+                            <td> <input type="text" name="CustLastName" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">Address :</td>
-                            <td> <input type="text" name="CustAddress" size="30" maxlength="30" onchange="lastname();"> </td>
+                            <td> <input type="text" name="CustAddress" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">City :</td>
-                                <td><input type="text" name="CustCity" size="30" maxlength="30" onchange="lastname();"> </td>
+                                <td><input type="text" name="CustCity" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">Province :</td>
-                                <td> <input type="text" name="CustProv" size="30" maxlength="30" onchange="lastname();"> </td>
+                                <td> <input type="text" name="CustProv" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">Postal Code:</td>
-                            <td> <input type="text" name="CustPostal" size="30" maxlength="30" onchange="verify();"></td>
+                            <td> <input type="text" name="CustPostal" size="30" maxlength="30"></td>
                             </tr>
 
                             <tr>
                             <td align="right">Country :</td>
-                            <td> <input type="text" name="CustCountry" size="30" maxlength="30" onchange="lastname();"> </td>
+                            <td> <input type="text" name="CustCountry" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">Phone number:</td>
-                                <td> <input type="text" name="CustHomePhone" size="30" maxlength="30" onchange="check_phone();"> </td>
+                                <td> <input type="text" name="CustHomePhone" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">Business number:</td>
-                                <td> <input type="text" name="CustBusPhone" size="30" maxlength="30" onchange="check_phone();"> </td>
+                                <td> <input type="text" name="CustBusPhone" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                                 <td align="right">E-mail:</td>
-                                <td> <input type="text" name="CustEmail" size="30" maxlength="30" onchange="check_phone();"> </td>
+                                <td> <input type="text" name="CustEmail" size="30" maxlength="30"> </td>
                             </tr>
 
                             <tr>
                             <td align="right">Agent :</td>
-                                <td> <input type="text" name="AgentId" size="30" maxlength="30" onchange="agency();"></td>
+                                <td> <input type="text" name="AgentId" size="30" maxlength="30"></td>
                             </tr>
                             <tr>
                                 <td>Passenger Medical Information
                                 </td>
-                                <td align="left"><textarea name="Comments" rows="3" cols="30" onchange="verify();"></textarea></td>
+                                <td align="left"><textarea name="Comments" rows="3" cols="30"></textarea></td>
                             </tr>
                         </table>
 
@@ -247,7 +150,7 @@ function putdata()
                         <table>
                             <tr>
                                 <td align="right">Credit Card Number:</td>
-                                <td> <input type="text" name="credit" size="30" maxlength="30" onchange="credit();"></td>
+                                <td> <input type="text" name="credit" size="30" maxlength="30"></td>
                             </tr>
 
                             <tr>
@@ -258,8 +161,8 @@ function putdata()
                         
                         <table style="float:right; padding-right:10px;">
                             <tr> 
-                                <td><input type="submit" id="buttonNormal" value="Place Order" onclick="return putdata();"></td>
-                                <td><input type="reset" id="buttonNormal" value="Clear" onclick="return putdata();"></td>
+                                <td><input type="submit" id="buttonNormal" value="Save" ></td>
+                                <td><input type="reset" id="buttonNormal" value="Clear" onclick="return confirm('Do you want to reset all?')"></td>
                             </tr>
                         </table>
                     </div02>

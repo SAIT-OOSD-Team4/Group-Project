@@ -84,7 +84,7 @@ function compare_dates($dateDB)
         $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
         
         $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
-      
+        
         mysqli_close($link);
         return $result;
     }
