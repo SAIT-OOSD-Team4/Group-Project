@@ -21,7 +21,7 @@
             <br />
             <h2>reviews</h2>
             <hr/>
-            <p>Bavaria ipsum dolor sit amet at obandeln hoid, Eternal and three Dog. Sepp sammawiedaguad resch Wurscht fei hea Lewakaas ham called i.
+            <p>Bavaria ipsum dolor sit amet at obandeln hoid, Eternal and three Dog. Sepp Wurscht fei hea Lewakaas ham called i.
                 <br/>
                 <i>"Darcie"</i></p>
             <p>Maderln fensdaln mehra Gstanzl is the liab Xaver Auffisteign liberalitas Bavariae back of the mas is schee.
