@@ -152,6 +152,14 @@ Assignment: Project Workshop 1
                                 </td>
                                 <td align="left"><textarea name="Comments" rows="3" cols="30"></textarea></td>
                             </tr>
+							<tr>
+							<td>
+                            Number of Passenger: 
+							<select name="Passengers">
+							<option selected>1</option>
+							<option>2</option>
+							</select>
+							</td></tr>
                         </table>
 
                         <h4><b>Payment Information</b></h4>
@@ -165,11 +173,7 @@ Assignment: Project Workshop 1
                             <tr>
                                 <td align="right">Payment Method:Type of Card</td>
                             </tr>
-                            Number of Passenger: 
-							<select name="Passengers">
-							<option selected>1</option>
-							<option>2</option>
-							</select>
+		
 							
                         </table>
                         
