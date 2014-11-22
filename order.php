@@ -171,10 +171,10 @@ Assignment: Project Workshop 1
 							<td>
                             Trip Type: 
 							<select name="TripType" id="TripType">
-							<option selected>Leisure</option>
-							<option>Business</option>
-							<option>Group</option>
-							<option>Inter-Stellar</option>
+							<option selected>L</option>
+							<option>B</option>
+							<option>G</option>
+							
 							</select>
 							</td></tr>
                         </table>

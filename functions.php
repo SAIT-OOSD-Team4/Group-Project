@@ -51,24 +51,23 @@ Assignment: CPRG210 - Web Application Concepts
 		
 		$bookingDate = date("Y-m-d H:i:s");
 		$bookingNo= substr(str_shuffle(str_repeat('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', mt_rand(1,6))),1,6);
-		
+		$random = rand(1,500);
 			$sql = "INSERT INTO bookings values
 			(NULL,
 			'$bookingDate',
 			'$bookingNo',
-			'$bookinginfo[Passengers],
-			'$bookinginfo[CustomerId],
-			'$bookinginfo[TripType],
-			'NULL'
+			'$bookinginfo[Passengers]',
+			NULL,
+			'$bookinginfo[TripType]',
+			NULL
 			)";
-
+        print ("<script> alert($random); </script>");
         $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
         
         $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
       
         mysqli_close($link);//close connection link  
         return $result;//return BOOL if insert was successful or not
-
 
     }
 ?>

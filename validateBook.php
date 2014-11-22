@@ -115,7 +115,7 @@ Assignment: CPRG210 - Web Application Concepts
             {
                 $_SESSION['enterCustomer'] ="Not able to save the data";
             }
-            header("Location:index.php");
+            header("Location:confirmation.php");
         }
     }
 ?>
