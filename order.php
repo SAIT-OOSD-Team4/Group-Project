@@ -1,5 +1,5 @@
 <!--
-Student:Jasmeen Kathuria 
+Student:Jasmeen Kathuria & Jose Marcano
 Course Module: CPRG210
 Date: October 30,2014
 Assignment: Project Workshop 1 
@@ -23,7 +23,7 @@ Assignment: Project Workshop 1
         <link rel="stylesheet" type="text/css" href="stylesheet.css"><!--css stylesheet-->
         <script type="text/javascript" src="javaScriptInfo.js"></script><!--javascript functions-->
         
-        <title>Main Page</title>
+        <title>Order Page</title>
 
     </head>
 
@@ -50,13 +50,25 @@ Assignment: Project Workshop 1
                     include("navigation.php");
                 ?>
                 
+
+
             </div><!-- nav ends --> 
             
+            <!-- ORDER PAGE REGISTRATION FORM
+            INFO INPUT FOR BOOKING AND CUSTOMER DOING THE BOOKING --> 
+
             <div id="section"><!-- section starts -->
-                
+                <?php 
+                // DM and JM : Stores the package ID in a variable
+                $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                $package_ID = substr($actual_link, -1); 
+                print "You have selected package # ".$package_ID;
+                ?>
                 <form name="registerBooking" action="validateBook.php">
+                    <input type='hidden' name='PackageId' value="<?php echo "$package_ID"; ?> /> 
                     <div02>
-                        <h4><b>Product Selection</b></h4>
+                        <h4><b>Product Selection</b></h4>                        
+
                         <hr><!-- Horizontal rule -->
                         <table style="margin-top:10px; margin-bottom:10px;">
                             <col width="100px">
@@ -143,10 +155,6 @@ Assignment: Project Workshop 1
                                 <td> <input type="text" name="CustEmail" size="30" maxlength="30"> </td>
                             </tr>
 
-                            <tr>
-                            <td align="right">Agent :</td>
-                                <td> <input type="text" name="AgentId" size="30" maxlength="30"></td>
-                            </tr>
                             <tr>
                                 <td>Passenger Medical Information
                                 </td>

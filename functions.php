@@ -1,6 +1,6 @@
 
 <!--
-Student:Leisy Moliner Hernandez
+Student:Leisy Moliner Hernandez, Jose Marcano, Darcie Milliken, Jazmeen Kathuria
 Course Module: CPRG210
 Date: Nov 10,2014
 Assignment: CPRG210 - Web Application Concepts
@@ -10,27 +10,13 @@ Assignment: CPRG210 - Web Application Concepts
     //function to receive associative array containing customer data. 
     //It will connect the travelexperts database, loop though each item in the array
     //(“INSERT” SQL statement) 
-    function insertCustomer($customerdata)
-    {   
-        $sql = "INSERT INTO customers values (NULL, '$customerdata[CustomerId]', '$customerdata[CustFirstName]',
-        '$customerdata[CustLastName]', '$customerdata[CustAddress]','$customerdata[CustCity]',
-        '$customerdata[CustProv]', '$customerdata[CustPostal]', '$customerdata[CustCountry]', '$customerdata[CustHomePhone]',
-        '$customerdata[CustEmail]', '$customerdata[CustBusPhone]', '$customerdata[CustPassword]', '$customerdata[CustUserName]')";
-        
-        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
-        
-        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
-      
-        mysqli_close($link);//close connection link  
-        return $result;//return BOOL if inser was successful or not
-    }
+
 	
-	
-	//
+	//Jose Marcano & Jasmeen Kathuria & Leisy Hernandez
 	//Insert customer without account info(pass&accName)
 	//
 	
-	    function insertCustomer2($customerdata)
+	    function insertCustomer($customerdata)
     {   
         $sql = "INSERT INTO customers values (NULL, '$customerdata[CustFirstName]',
         '$customerdata[CustLastName]', '$customerdata[CustAddress]','$customerdata[CustCity]',
@@ -45,7 +31,8 @@ Assignment: CPRG210 - Web Application Concepts
         mysqli_close($link);//close connection link  
         return $result;//return BOOL if inser was successful or not
     }
-	
+	//Jose Marcano & Jasmeen Kathuria
+    //Inserts Booking to database
 		function insertBooking($bookinginfo)
 		{
 		
@@ -59,7 +46,7 @@ Assignment: CPRG210 - Web Application Concepts
 			'$bookinginfo[Passengers]',
 			NULL,
 			'$bookinginfo[TripType]',
-			NULL
+			'$bookinginfo[PackageId]'
 			)";
         print ("<script> alert($random); </script>");
         $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
@@ -75,7 +62,7 @@ Assignment: CPRG210 - Web Application Concepts
 
 
 <?php
-// Darcie Milliken
+// Darcie Milliken & Jose Marcano
 // November 12 2014
 // This file contains functions for the website pages to use. 
 
@@ -95,30 +82,6 @@ function compare_dates($dateDB)
 
 }  // end function 
 
-?>
-
-
-
-<?php
-//Jasmeen Kathuria
-// This Code is linked to the Order Page (order.php)
-    
-    //(“INSERT” SQL statement) 
-    function addcust($addcustdata)
-    {   
-        $sql = "INSERT INTO customers values (NULL, '$addcustdata[CustFirstName]',
-        '$addcustdata[CustLastName]', '$addcustdata[CustAddress]','$addcustdata[CustCity]',
-        '$addcustdata[CustProv]', '$addcustdata[CustPostal]', '$addcustdata[CustCountry]', '$addcustdata[CustHomePhone]',
-        '$addcustdata[CustEmail]', '$addcustdata[CustBusPhone]', '$addcustdata[CustPassword]', '$addcustdata[AgentId]')";
-        
-        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
-        
-        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
-      
-        mysqli_close($link);
-        return $result;
-    }
-	
 ?>
 
 

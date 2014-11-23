@@ -1,5 +1,8 @@
 <!--
-
+Student:Jose Marcano
+Course Module: CPRG210
+Date: October 30,2014
+Assignment: Project Workshop 1 
 -->
 
 
@@ -40,24 +43,23 @@
                 
             </div><!-- nav ends --> 
             
-
+//Jose Marcano & Jazmeen Kathuria
+//Google Maps plug in
             <div id="sectionFull"><!-- section starts -->
-<table id="Master" align="left">
-  
-                <tr><td>
-                     <br>
+                <table id="Master" align="left">
+                //AGENCY 1 MAP
+                <tr><td><br>
 
                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.938799183043!2d-113.95701509999998
                     !3d51.1280369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716396a144185b%3A0x5d12075c7d64e9d!2s65+Saddlecreek+Crescent+
           NE%2C+Calgary%2C+AB+T3J+4R9!5e0!3m2!1sen!2sca!4v1416524598665" width="400" height="400" frameborder="0" style="border:0"></iframe>
 
- <br> <br> <br> 
+                //AGENCY 2 MAP
+                <br><br><br> 
                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2503.938799183043!2d-113.95701509999998
                     !3d51.1280369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716396a144185b%3A0x5d12075c7d64e9d!2s65+Saddlecreek+Crescent+
           NE%2C+Calgary%2C+AB+T3J+4R9!5e0!3m2!1sen!2sca!4v1416524598665" width="400" height="400" frameborder="0" style="border:0"></iframe>
-        </td>
-  
-<td>
+        </td><td>
                 <div04>
                     <h2 style="background-color:rgba(1,1,1,0.7)";><b>Contact an Agency</b></h2>
                     <br>
@@ -115,7 +117,7 @@
                    }
                    $datatable0 .= "</table>";
 
-                //Agents from Agency 1
+                 //Agents from Agency 1
                    $sql = "SELECT `AgtFirstName`,`AgtMiddleInitial`,`AgtBusPhone`,`AgtEmail`, `AgtPosition`
                    FROM `agents` WHERE `AgencyId`= 1";
 

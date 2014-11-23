@@ -99,13 +99,13 @@ Assignment: CPRG210 - Web Application Concepts
         //Store error in the session variable $messsage
         $_SESSION['errorMessage'] = $message;
         
-        //Checking the value returned by the function and print 
-        //a success/fail message to the agent entry page
+        //Checking the value returned by the functions and print 
+        //a success/fail message to the order page
         if (!empty($message)) {
             header("Location:order.php");
         }
         else {
-            $result1 = insertCustomer2($_REQUEST);
+            $result1 = insertCustomer($_REQUEST);
 			$result2 = insertBooking($_REQUEST);
             if ($result1 & $result2)
             {

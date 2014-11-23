@@ -145,6 +145,17 @@ function mcancelclosetime() {
 	}
 }
 
+function choosePackage(pkgID)
+{
+    // Darcie Milliken, November 2014
+    // this function is called when the customer clicks on the order button on the packages page
+
+    // redirect to the appropriate order page 
+    window.location="order.php?pkgid=" +pkgID;
+
+    return pkgID;
+}
+
 // close layer when click-out
 document.onclick = mclose; 
 

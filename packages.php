@@ -97,6 +97,7 @@
                 print("</strong>");
 
                 // DM: Printing packages with valid dates from the database. Styles by LM. 
+
                 while($valid_rows = mysqli_fetch_assoc($result))
                     {
                         
@@ -132,15 +133,15 @@
                         echo "<td style='background-color:rgba(1,1,1,0.5);'> $" .  $formatted_price . "</td>";
 
                         // order button for each package 
-                        $pkgID = $valid_rows["PackageId"];
+
                         echo "<td style='background-color:rgba(1,1,1,0.5);'> 
-                         <input id='buttonNormal' type='button' value='Order' onclick='choosePackage($pkgID);'></a> </td>";
+                         <input id='buttonNormal' type='button' value='Order' onclick='choosePackage($valid_rows[PackageId]);'></a> </td>";
 
                         print("</tr>");
                     }
 
                     print("</table>");
-                    
+
                     // Disconnect from database
                     mysqli_close($link);
 
