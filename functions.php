@@ -1,10 +1,10 @@
-
 <!--
 Student:Leisy Moliner Hernandez
 Course Module: CPRG210
-Date: Nov 10,2014
-Assignment: CPRG210 - Web Application Concepts
+Date: October 30,2014
+Assignment: PROJ207 Threaded Workshop Project
 -->
+
 <?php
 
     //function to receive associative array containing customer data. 
@@ -52,7 +52,6 @@ function compare_dates($dateDB)
 ?>
 
 
-
 <?php
 //Jasmeen Kathuria
 // This Code is linked to the Order Page (order.php)
@@ -73,9 +72,6 @@ function compare_dates($dateDB)
         return $result;
     }
 	
-	
-	
-	
 	function addbooking($booking)
     {   
         $sql = "INSERT INTO customers values (NULL, '$addbooking[from]',
@@ -88,11 +84,6 @@ function compare_dates($dateDB)
         mysqli_close($link);
         return $result;
     }
-	
-	
-	
-	
-	
 ?>
 
 

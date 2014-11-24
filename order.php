@@ -278,6 +278,12 @@ function putdata()
                         echo $_SESSION['errorMessage'];
                     }
                     ?>
+                    
+                    <br/><br/><br/>
+                    <img src="Images/aux03.jpg" alt="Mountain View" style="width:250px;height:150px">
+                    <br/>
+                    <img src="Images/aux04.jpg" alt="Mountain View" style="width:250px;height:150px">
+                    
                 </div03>
             </div><!-- sideNav ends -->
             

@@ -1,34 +1,18 @@
 /*
-
+Student:Leisy Moliner Hernandez
+Course Module: CPRG210
+Date: October 30,2014
+Assignment: PROJ207 Threaded Workshop Project
 */
 
 //index page
-//Arrays
 //Arrays for current date
 var months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 var days = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
 var today = new Date();
 
-//Functions
-
-
-
-//contact page
-//Arrays
-
-//Functions
-
-
 
 //register page
-/*
-Student:Leisy Moliner Hernandez
-Course Module: CPRG210
-Date: October 30,2014
-Assignment: Project Workshop1
-*/
-//Arrays
-
 //Functions
 function verify_all()
 {   
@@ -71,17 +55,26 @@ function verify_email()
 function verify_password()
 {
     if ((document.info.password.value.length < 3) || (document.info.password.value.length > 8))
-    {alert('Please enter a valid password');ok=false;}
+    {
+        alert('Please enter a valid password');
+        ok=false;
+    }
+    if (document.info.password.value != document.info.password.value)
+    { 
+        alert('Your passwords do no match');
+        ok=false;
+    }
   
 }
 
 
-/*Navigation section - drop down menu
+/*
 Student:Leisy Moliner Hernandez
 Course Module: CPRG210
-Date: Nov 13,2014
-Assignment: Project Workshop HTML/CSS/Javascript 
+Date: October 30,2014
+Assignment: PROJ207 Threaded Workshop Project
 */
+//Navigation section - drop down menu
 //Array for descriptions on nav bar
 var desc=["Customer Login",
           "Agent Login",

@@ -1,16 +1,16 @@
 <!--
 Student:Leisy Moliner Hernandez
 Course Module: CPRG210
-Date: October 30,2014
-Assignment: Project Workshop HTML/CSS/Javascript 
+Date: Nov 21,2014
+Assignment: PROJ207 Threaded Workshop Project
 -->
 
 <?php
+    //calling the php session
     session_start();
     if (!isset($_SESSION['loggedin']))
     {
         $_SESSION['pagename'] = 'register.php';
-        //header("Location: login.php");
     }
 ?>
 
@@ -32,22 +32,21 @@ Assignment: Project Workshop HTML/CSS/Javascript
         
         <div id=wrap><!-- wrap starts -->
             
-            
             <div id="header"><!-- header starts -->  
                 
-                <!-- header content goes here --> 
                 <?php
+                    //include header php file
                     $title = "register with us";
                     include("header.php");
                 ?>
-            
+                
             </div><!-- header ends -->   
 
             
             <div id="nav"><!-- nav starts --> 
                 
-                <!-- nav content goes here --> 
                 <?php
+                    //include navigation php file
                     include("navigation.php");
                 ?>
                 
@@ -67,7 +66,7 @@ Assignment: Project Workshop HTML/CSS/Javascript
                             <col width="350px">
 
                             <tr> 
-                                <td class="alignRight">First Name</td>
+                                <td class="alignRight">First name</td>
                                 <td>-</td>
                                 <td><input type="text" name="CustFirstName" size="45px"></td>
                             </tr>
@@ -97,17 +96,17 @@ Assignment: Project Workshop HTML/CSS/Javascript
                                 <td><input type="text" name="CustCountry" size="45px"></td>
                             </tr>
                             <tr>
-                                <td class="alignRight">Postal Code</td>
+                                <td class="alignRight">Postal code</td>
                                 <td>-</td>
                                 <td><input type="text" name="CustPostal" size="20px"></td>
                             </tr>
                             <tr>
-                                <td class="alignRight">Home Phone Number</td>
+                                <td class="alignRight">Home phone number</td>
                                 <td>-</td>
                                 <td><input type="text" name="CustHomePhone" size="20px"></td>
                             </tr>
                             <tr>
-                                <td class="alignRight">Business Phone Number</td>
+                                <td class="alignRight">Business phone number</td>
                                 <td>-</td>
                                 <td><input type="text" name="CustBusPhone" size="20px"></td>
                             </tr>
@@ -140,12 +139,12 @@ Assignment: Project Workshop HTML/CSS/Javascript
                                 <td><input type="password" name="CustPassword" size="45px"></td>
                             </tr>
                             <tr> 
-                                <td class="alignRight">Repeat Password</td>
+                                <td class="alignRight">Repeat password</td>
                                 <td>-</td>
-                                <td><input type="password" name="passwordRep" size="45px"></td>
+                                <td><input type="password" name="password_Rep" size="45px"></td>
                             </tr>
                             <tr> 
-                                <td colspan="3" align="center">between 3-8 characters</td>
+                                <td colspan="3" align="right">At least 8 characters, a lowercase, an uppercase and a number</td>
                             </tr>
                         </table>
                 
@@ -174,27 +173,33 @@ Assignment: Project Workshop HTML/CSS/Javascript
             <div id="sideNav"><!-- sideNav starts --> 
               
                 <div03 style="padding:10px; float:left;">
+                    
                     <!--Reload the form and display error message if found-->
                     <h3>Please complete every field</h3><br/>
+                    
                     <?php
                     if (isset($_SESSION['errorMessage']))
                     {
                         echo $_SESSION['errorMessage'];
                     }
                     ?>
+                    <br/><br/><br/>
+                    <img src="Images/aux01.jpg" alt="Mountain View" style="width:250px;height:150px">
+                    <br/>
+                    <img src="Images/aux02.jpg" alt="Mountain View" style="width:250px;height:150px">
+                    
                 </div03>
+                
             </div><!-- sideNav ends --> 
             
-
             <div id="footer"><!-- footer starts --> 
-                <!-- footer content goes here --> 
+                
                 <?php
                     include("footer.php");
                 ?>
             </div><!-- footer ends --> 
             
         </div> <!-- section ends -->  
-        
     </body>
 </html>
             

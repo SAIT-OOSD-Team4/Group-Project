@@ -1,45 +1,50 @@
 <!--
 Student:Leisy Moliner Hernandez
 Course Module: CPRG210
-Date: Nov 10,2014
-Assignment: CPRG210 - Web Application Concepts
+Date: Nov 21,2014
+Assignment: PROJ207 Threaded Workshop Project
 -->
 
 <?php
+    //calling the php session
     session_start();
-    if (!isset($_SESSION['loggedin'])){
+
+    if (!isset($_SESSION['loggedin']))
+    {
         $_SESSION['enterCustomer'] = "";
     }
 ?>
 
 
 <?php
-    include("functions.php");//including funtion for the array
+    //including funtion for the array
+    include("functions.php");
 
     if (isset($_REQUEST['CustFirstName']))
     {
         $message = "";
         
-        //validating first name
-        if (empty($_REQUEST['CustFirstName'])) {
+        //validating customer's first name
+        if (empty($_REQUEST['CustFirstName'])) 
+        {
             $message .="Enter your First Name<br/>";  
         }
         else {
-            //Allows letters and common char
-            if(!preg_match("/^[a-z A-Z\,\. -]+$/i", $_REQUEST['CustFirstName']))
+            //Allows letters and common characters
+            if(!preg_match("/^[a-z A-Z\,\.\-\']+$/i", $_REQUEST['CustFirstName']))
             {
                 $message .= "Enter a valid First Name<br/>";
             }
         }
         
-        
-        //validating last name 
-        if (empty($_REQUEST['CustLastName'])) {
+        //validating customer's last name 
+        if (empty($_REQUEST['CustLastName'])) 
+        {
             $message .="Enter your Last Name<br/>";
         }
         else {
-            //Allows only letters
-            if(!preg_match("/^[a-z A-Z\,\. -]+$/i", $_REQUEST['CustLastName']))
+            //Allows letters and common characters
+            if(!preg_match("/^[a-z A-Z\,\.\-\']+$/i", $_REQUEST['CustLastName']))
             {
                 $message .= "Enter a valid Last Name<br/>";
             }
@@ -54,23 +59,23 @@ Assignment: CPRG210 - Web Application Concepts
         {
             if(!preg_match("/^[a-z A-Z]+$/i", $_REQUEST['CustCity']))
             {
-                $message .= "Invalid character in city<br/>";
+                $message .= "Invalid City<br/>";
             }
         }
-        //validating agent phone number
+        //validating customer's home phone number
         if (empty($_REQUEST['CustHomePhone']))
         {
-            $message .="Enter a home phone number<br/>";
+            $message .="Enter your home phone number<br/>";
         }
         else 
         {
             if(!preg_match("/^[0-9\-\.\ \,\/\(\)\+]+$/i", $_REQUEST['CustHomePhone']))
             {
-                $message .= "Invalid character in home phone number<br/>";
+                $message .= "Invalid home phone number<br/>";
             }
         }
         
-        //validating agent phone number
+        //validating customer's business phone number
         if (empty($_REQUEST['CustBusPhone']))
         {
             $message .="Enter a business phone number<br/>";
@@ -79,22 +84,43 @@ Assignment: CPRG210 - Web Application Concepts
         {
             if(!preg_match("/^[0-9\-\.\ \,\/\(\)\+]+$/i", $_REQUEST['CustBusPhone']))
             {
-                $message .= "Invalid character in phone number<br/>";
+                $message .= "Invalid business phone number<br/>";
             }
         }
         
         
-        //validating agent email number
+        //validating customer's email address
         if (empty($_REQUEST['CustEmail'])) {
             $message .="Enter your Email<br/>";
         }
         else {
             if(!filter_var($_REQUEST['CustEmail'],FILTER_VALIDATE_EMAIL))
             {
-                $message .= "Enter a valid email";
+                $message .= "Invalid email address";
             }
         }
         
+        //validating password and checking for match
+        if (empty($_REQUEST['CustPassword'])) 
+        {
+            $message .="Enter a password<br/>";
+        }
+        else 
+        {
+            //check that the password is at least 8 characters long 
+            //and contains at least one of each of lowercase, uppercase and a number
+            if(!preg_match("/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/", $_REQUEST['CustPassword']))
+            {
+                $message .= "Invalid password";
+            }
+            else 
+            {
+                if($_REQUEST['CustPassword'] != $_REQUEST['password_Rep'] )
+                {
+                    $message .= "Passwords do no match";
+                }
+            }
+        }
         
         //Store error in the session variable $messsage
         $_SESSION['errorMessage'] = $message;
@@ -108,11 +134,11 @@ Assignment: CPRG210 - Web Application Concepts
             $result = insertCustomer($_REQUEST);
             if ($result)
             {
-                $_SESSION['enterCustomer'] ="Agent information submitted";
+                $_SESSION['enterCustomer'] ="Your information was submitted";
             }
             else
             {
-                $_SESSION['enterCustomer'] ="Not able to save the data";
+                $_SESSION['enterCustomer'] ="Not able to save your data";
             }
             header("Location:index.php");
         }
