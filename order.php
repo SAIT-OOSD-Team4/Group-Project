@@ -31,7 +31,6 @@ Assignment: Project Workshop 1
         
         <div id=wrap><!-- wrap starts -->
             
-            
             <div id="header"><!-- header starts -->  
                 
                 <!-- header content goes here --> 
@@ -58,96 +57,91 @@ Assignment: Project Workshop 1
             INFO INPUT FOR BOOKING AND CUSTOMER DOING THE BOOKING --> 
 
             <div id="section"><!-- section starts -->
+                
                 <div02>
+                    <?php 
+                    // Darcie Milliken : Store the package ID in a variable and display the details of the chosen package 
 
-                <?php 
-                // Darcie Milliken : Store the package ID in a variable and display the details of the chosen package 
+                    $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                    $package_ID = substr($actual_link, -1); 
+                    print "You have selected package # ".$package_ID;
+                    $link = mysqli_connect("localhost", "root", "", "travelexperts") 
+                            or die("Connection Error: " . mysqli_connect_error());   
+                    $sql = "SELECT * FROM `packages` WHERE `PackageId`= $package_ID";
 
-                $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                $package_ID = substr($actual_link, -1); 
-                print "You have selected package # ".$package_ID;
-                $link = mysqli_connect("localhost", "root", "", "travelexperts") 
-                        or die("Connection Error: " . mysqli_connect_error());   
-                $sql = "SELECT * FROM `packages` WHERE `PackageId`= $package_ID";
+                    $result = mysqli_query($link, $sql) or die("SQL Error");
+                    // LM wrote this block here
+                    print("<table cellpadding = '5' cellspacing='5' style='float:right;'>");
+                    print("<col width='200px'>");
+                    print("<col width='200px'>");
+                    print("<col width='100px'>");
+                    print("<col width='100px'>");
+                    print("<col width='100px'>");
+                    print("<col width='00px'>");
 
-                $result = mysqli_query($link, $sql) or die("SQL Error");
-                // LM wrote this block here
-                print("<table cellpadding = '5' cellspacing='5' style='float:right;'>");
-                print("<col width='200px'>");
-                print("<col width='200px'>");
-                print("<col width='100px'>");
-                print("<col width='100px'>");
-                print("<col width='100px'>");
-                print("<col width='00px'>");
+                    // DM: Printing the first row of table with headers      
+                    print("<strong>");
+                    print("<tr>");
+                    print("<td style='background-color:rgba(1,1,1,0.9);'> Package Name </td>");
+                    print("<td style='background-color:rgba(1,1,1,0.9);'> Description </td>");
+                    print("<td style='background-color:rgba(1,1,1,0.9);'> Departure Date </td>");
+                    print("<td style='background-color:rgba(1,1,1,0.9);'> Return Date </td>");
+                    print("<td style='background-color:rgba(1,1,1,0.9);'> Price </td>");
+                    print("<td>  </td>");             // Order Buttons will go in this column.
+                    print("</tr>");
+                    print("</strong>");
 
-                // DM: Printing the first row of table with headers      
-                print("<strong>");
-                print("<tr>");
-                print("<td style='background-color:rgba(1,1,1,0.9);'> Package Name </td>");
-                print("<td style='background-color:rgba(1,1,1,0.9);'> Description </td>");
-                print("<td style='background-color:rgba(1,1,1,0.9);'> Departure Date </td>");
-                print("<td style='background-color:rgba(1,1,1,0.9);'> Return Date </td>");
-                print("<td style='background-color:rgba(1,1,1,0.9);'> Price </td>");
-                print("<td>  </td>");             // Order Buttons will go in this column.
-                print("</tr>");
-                print("</strong>");
+                    // DM: Printing packages with valid dates from the database. Styles by LM. 
+                    while($selected_package = mysqli_fetch_assoc($result))
+                        {
+                            print("<tr>");
+                            echo "<td style='background-color:rgba(1,1,1,0.7); color:#99FF33;'> " . $selected_package["PkgName"] . "</td>";
+                            echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $selected_package["PkgDesc"] . "</td>";
 
-                // DM: Printing packages with valid dates from the database. Styles by LM. 
-                while($selected_package = mysqli_fetch_assoc($result))
-                    {
-                        
-                        print("<tr>");
-                        echo "<td style='background-color:rgba(1,1,1,0.7); color:#99FF33;'> " . $selected_package["PkgName"] . "</td>";
-                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $selected_package["PkgDesc"] . "</td>";
-                       
-                        // Formatting the dates to look nicer
-                        $start_date = date_create($selected_package["PkgStartDate"]);
-                        $start_date = date_format($start_date, 'M j Y');
-                       
-                        $end_date = date_create($selected_package["PkgEndDate"]);
-                        $end_date = date_format($end_date, 'M j Y');
+                            // Formatting the dates to look nicer
+                            $start_date = date_create($selected_package["PkgStartDate"]);
+                            $start_date = date_format($start_date, 'M j Y');
 
-                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $start_date . "</td>";
+                            $end_date = date_create($selected_package["PkgEndDate"]);
+                            $end_date = date_format($end_date, 'M j Y');
 
-                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $end_date . "</td>";
+                            echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $start_date . "</td>";
 
-                        // let's try and format the prices here
-                        $formatted_price = number_format((float)$selected_package["PkgBasePrice"], 2, '.', '');
-                        echo "<td style='background-color:rgba(1,1,1,0.5);'> $" .  $formatted_price . "</td>";
+                            echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $end_date . "</td>";
 
-                        print("</tr>");
-                    }
-                ?>
-            </div02>
-                <form name="registerBooking" action="validateBook.php">
-                    
-                    <div02>
-                        <h4><b>Product Selection</b></h4>                        
+                            // let's try and format the prices here
+                            $formatted_price = number_format((float)$selected_package["PkgBasePrice"], 2, '.', '');
+                            echo "<td style='background-color:rgba(1,1,1,0.5);'> $" .  $formatted_price . "</td>";
+
+                            print("</tr>");
+                            print("</table>");
+                        }
+                    ?>
+          
+                    <form name="registerBooking" action="validateBook.php">
+
+                        <br><br>
+                        <h4><b>Product Selection</b></h4> 
+                        <hr><!-- Horizontal rule -->
                         <input type='hidden' name='PackageId' value="<?php echo "$package_ID"; ?> /> 
                         <hr><!-- Horizontal rule -->
                         <table style="margin-top:10px; margin-bottom:10px;">
-                            <col width="100px">
-                            <col width="100px">
-                            <col width="100px">
-                            <col width="100px">
-                            <col width="100px">
-
+                           
                             <tr >
-                                <td align="center"> <br><input type="radio" name="flight-product"> Flight
+                                <td align="center"><input type="radio" name="flight-product">Flight
                                 </td>
-                                 <td align="center"> <br><input type="radio" name="flight-product"> Flight + Hotel
+                                 <td align="center"><input type="radio" name="flight-product">Flight + Hotel
                                 </td>
-                                <td align="center"><br><input type="radio" name="cruise-product">  Cruise
+                                <td align="center"><input type="radio" name="cruise-product">Cruise
                                 </td>
-                                <td align="center"> <br><input type="radio" name="cruise-product"> Cruise + Hotel
+                                <td align="center"><input type="radio" name="cruise-product">Cruise + Hotel
                                 </td>
-                                <td align="center"> <br><input type="radio" name="rental"> Car Rental
+                                <td align="center"><input type="radio" name="rental">Car Rental
                                 </td>
                             </tr>
-
-
                         </table>
 
+                        <br><br>
                         <h4><b>Destination information</b></h4>
                         <hr><!-- Horizontal rule -->
                         <table>
@@ -217,31 +211,31 @@ Assignment: Project Workshop 1
                                 </td>
                                 <td align="left"><textarea name="Comments" rows="3" cols="30"></textarea></td>
                             </tr>
-							<tr>
-							<td>
+                            <tr>
+                            <td>
                             Number of Passenger: 
-							<select name="Passengers" id="Passengers">
-							<option selected>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-							</select>
-							</td></tr>
-							
-							<tr>
-							<td>
+                            <select name="Passengers" id="Passengers">
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            </select>
+                            </td></tr>
+
+                            <tr>
+                            <td>
                             Trip Type: 
-							<select name="TripType" id="TripType">
-							<option selected>L</option>
-							<option>B</option>
-							<option>G</option>
-							
-							</select>
-							</td></tr>
+                            <select name="TripType" id="TripType">
+                            <option selected>L</option>
+                            <option>B</option>
+                            <option>G</option>
+
+                            </select>
+                            </td></tr>
                         </table>
 
                         <h4><b>Payment Information</b></h4>
@@ -255,19 +249,18 @@ Assignment: Project Workshop 1
                             <tr>
                                 <td align="right">Payment Method:Type of Card</td>
                             </tr>
-		
-							
+
+
                         </table>
-                        
+
                         <table style="float:right; padding-right:10px;">
                             <tr> 
                                 <td><input type="submit" id="buttonNormal" value="Save" ></td>
                                 <td><input type="reset" id="buttonNormal" value="Clear" onclick="return confirm('Do you want to reset all?')"></td>
                             </tr>
                         </table>
-                    </div02>
-                </form>
-                
+                    </form>
+                </div02>
             </div><!-- section ends --> 
             
             <div id="sideNav"><!-- sideNav starts --> 

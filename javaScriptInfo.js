@@ -81,8 +81,8 @@ var desc=["Customer Login",
           "Register"];
 
 //Array for link on nav bar
-var urlPages =["login/index.php",
-                "register.php",
+var urlPages =["pageTemp.php",
+                "pageTemp.php",
                 "register.php"];
 
 /*Funtion to display dropdown menu on navigation bar*/
