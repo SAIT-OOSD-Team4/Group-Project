@@ -28,6 +28,8 @@
 
                     include("header.php");
                     include("functions.php");
+
+                    date_default_timezone_set('America/Edmonton');
                 ?>
             
             </div><!-- header ends -->   
@@ -56,75 +58,94 @@
                 <div03>
                     <br/><br/><br/><br/><br/>
                 <?php 
-                // Darcie Milliken, November 10 2014//
+                // Darcie Milliken, November 10 2014
                 // Connect with travel experts database and display the available packages
+                // Darcie M wrote the functionality
+                // Leisy M added the styles
 
-                    //Set up database Connection
-
-                    $link = mysqli_connect("localhost", "root", "", "travelexperts") 
-                     or die("Connection Error: " . mysqli_connect_error());   
-
-
-                    $sql = "SELECT `PkgName`,`PkgDesc`,`PkgStartDate`,`PkgEndDate`,`PkgBasePrice` 
-                    FROM `packages` WHERE `PkgEndDate`>= DATE(NOW())";
+                session_start();
 
 
-                    $result = mysqli_query($link, $sql) or die("SQL Error");
+                //DM: Set up database Connection
+                $link = mysqli_connect("localhost", "root", "", "travelexperts") 
+                        or die("Connection Error: " . mysqli_connect_error());   
+                
+                // DM: Grab the package data from the travelexperts DB
+                $sql = "SELECT * FROM `packages` WHERE `PkgEndDate`>= DATE(NOW())";
 
+                $result = mysqli_query($link, $sql) or die("SQL Error");
 
-                    // Printing the first row of table with headers 
-                    print("<table cellpadding = '5' cellspacing='5' style='float:right;'>");
-                    print("<col width='200px'>");
-                    print("<col width='200px'>");
-                    print("<col width='100px'>");
-                    print("<col width='100px'>");
-                    print("<col width='100px'>");
-                    print("<col width='00px'>");
+                // LM wrote this block here
+                print("<table cellpadding = '5' cellspacing='5' style='float:right;'>");
+                print("<col width='200px'>");
+                print("<col width='200px'>");
+                print("<col width='100px'>");
+                print("<col width='100px'>");
+                print("<col width='100px'>");
+                print("<col width='00px'>");
 
-                           
-                   print("<strong>");
-                   print("<tr>");
-                   print("<td style='background-color:rgba(1,1,1,0.9);'> Package Name </td>");
-                   print("<td style='background-color:rgba(1,1,1,0.9);'> Description </td>");
-                   print("<td style='background-color:rgba(1,1,1,0.9);'> Departure Date </td>");
-                   print("<td style='background-color:rgba(1,1,1,0.9);'> Return Date </td>");
-                   print("<td style='background-color:rgba(1,1,1,0.9);'> Price </td>");
-                   print("<td>  </td>");             // Order Buttons will go in this column.
-                   print("</tr>");
-                   print("</strong>");
+                // DM: Printing the first row of table with headers      
+                print("<strong>");
+                print("<tr>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Package Name </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Description </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Departure Date </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Return Date </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Price </td>");
+                print("<td>  </td>");             // Order Buttons will go in this column.
+                print("</tr>");
+                print("</strong>");
 
-                    // Printing valid packages from the database
+                // DM: Printing packages with valid dates from the database. Styles by LM. 
 
-
-                    while($valid_rows = mysqli_fetch_assoc($result))
+                while($valid_rows = mysqli_fetch_assoc($result))
                     {
+                        
                         print("<tr>");
                         echo "<td style='background-color:rgba(1,1,1,0.7); color:#99FF33;'> " . $valid_rows["PkgName"] . "</td>";
                         echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $valid_rows["PkgDesc"] . "</td>";
-                        //echo "<td> " . $valid_rows["PkgStartDate"] . "</td>";
+                       
+                        // Lets's try and format the dates to look a bit nicer
+                        $start_date = date_create($valid_rows["PkgStartDate"]);
+                        $start_date = date_format($start_date, 'M j Y');
+                       
+                        $end_date = date_create($valid_rows["PkgEndDate"]);
+                        $end_date = date_format($end_date, 'M j Y');
+
+                       // this decision displays certain packages with red css based on the start date
                         if (compare_dates($valid_rows["PkgStartDate"]))
                           {
                             echo "<td style='background-color:rgba(1,1,1,0.5);' 
-                            style='color:red; font-weight:bold;'> " . $valid_rows["PkgStartDate"] . "</td>";
+                            style='color:red; font-weight:bold;'> " . $start_date . "</td>";
                           }
+
                         else
                         {
-                            echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $valid_rows["PkgStartDate"] . "</td>";
+                            echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $start_date . "</td>";
 
                         }
+                        // end decision 
 
-                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $valid_rows["PkgEndDate"] . "</td>";
-                        echo "<td style='background-color:rgba(1,1,1,0.5);'> $" . $valid_rows["PkgBasePrice"] . "</td>";
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $end_date . "</td>";
+
+                        // let's try and format the prices here
+                        $formatted_price = number_format((float)$valid_rows["PkgBasePrice"], 2, '.', '');
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> $" .  $formatted_price . "</td>";
+
+                        // order button for each package 
+
                         echo "<td style='background-color:rgba(1,1,1,0.5);'> 
-                        <a href='order.php'> <input id='buttonNormal' type='button' value='Order'></a> </td>";
-                        print("</tr>");
+                         <input id='buttonNormal' type='button' value='Order' onclick='choosePackage($valid_rows[PackageId]);'></a> </td>";
 
+                        print("</tr>");
                     }
 
                     print("</table>");
 
                     // Disconnect from database
                     mysqli_close($link);
+
+                    //make some notes about things I wanted to do here but didn't
                 ?> 
             </div><!-- sectionPackagePage ends --> 
 
@@ -160,5 +181,7 @@
                 ?>  
             </div><!-- footer ends --> 
         </div> <!-- wrap ends -->  
+
+
     </body>
 </html>

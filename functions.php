@@ -1,5 +1,5 @@
 <!--
-Student:Leisy Moliner Hernandez
+Student:Leisy Moliner Hernandez, Jose Marcano, Darcie Milliken, Jazmeen Kathuria
 Course Module: CPRG210
 Date: October 30,2014
 Assignment: PROJ207 Threaded Workshop Project
@@ -10,12 +10,19 @@ Assignment: PROJ207 Threaded Workshop Project
     //function to receive associative array containing customer data. 
     //It will connect the travelexperts database, loop though each item in the array
     //(“INSERT” SQL statement) 
-    function insertCustomer($customerdata)
+
+	
+	//Jose Marcano & Jasmeen Kathuria & Leisy Moliner Hernandez
+	//Insert customer without account info(pass&accName)
+	//
+	
+	    function insertCustomer($customerdata)
     {   
-        $sql = "INSERT INTO customers values (NULL, '$customerdata[CustomerId]', '$customerdata[CustFirstName]',
+        $sql = "INSERT INTO customers values (NULL, '$customerdata[CustFirstName]',
         '$customerdata[CustLastName]', '$customerdata[CustAddress]','$customerdata[CustCity]',
         '$customerdata[CustProv]', '$customerdata[CustPostal]', '$customerdata[CustCountry]', '$customerdata[CustHomePhone]',
-        '$customerdata[CustEmail]', '$customerdata[CustBusPhone]', '$customerdata[CustPassword]', '$customerdata[CustUserName]')";
+		'$customerdata[CustBusPhone]',
+        '$customerdata[CustEmail]',  NULL)";
         
         $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
         
@@ -24,12 +31,38 @@ Assignment: PROJ207 Threaded Workshop Project
         mysqli_close($link);//close connection link  
         return $result;//return BOOL if inser was successful or not
     }
+	//Jose Marcano & Jasmeen Kathuria
+    //Inserts Booking to database
+		function insertBooking($bookinginfo)
+		{
+		
+		$bookingDate = date("Y-m-d H:i:s");
+		$bookingNo= substr(str_shuffle(str_repeat('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', mt_rand(1,6))),1,6);
+		$random = rand(1,500);
+			$sql = "INSERT INTO bookings values
+			(NULL,
+			'$bookingDate',
+			'$bookingNo',
+			'$bookinginfo[Passengers]',
+			NULL,
+			'$bookinginfo[TripType]',
+			'$bookinginfo[PackageId]'
+			)";
+        print ("<script> alert($random); </script>");
+        $link = mysqli_connect("localhost", "root","","travelexperts") or die("Error: ".mysqli_connect_error());
+        
+        $result = mysqli_query($link,$sql) or die("Query Error...". mysqli_error($link));
+      
+        mysqli_close($link);//close connection link  
+        return $result;//return BOOL if insert was successful or not
+
+    }
 ?>
 
 
 
 <?php
-// Darcie Milliken
+// Darcie Milliken & Jose Marcano
 // November 12 2014
 // This file contains functions for the website pages to use. 
 
@@ -52,6 +85,7 @@ function compare_dates($dateDB)
 ?>
 
 
+<<<<<<< HEAD
 <?php
 //Jasmeen Kathuria
 // This Code is linked to the Order Page (order.php)
@@ -85,8 +119,6 @@ function compare_dates($dateDB)
         return $result;
     }
 ?>
-
-
 
 
 
