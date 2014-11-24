@@ -1,5 +1,5 @@
 <!--
-Student:Jasmeen Kathuria & Jose Marcano
+Student:Jasmeen Kathuria 
 Course Module: CPRG210
 Date: October 30,2014
 Assignment: Project Workshop 1 
@@ -183,7 +183,7 @@ Assignment: Project Workshop 1
 
                             <tr>
                                 <td align="right">Postal Code:</td>
-                            <td> <input type="text" name="CustPostal" size="30" maxlength="30"></td>
+                            <td> <input type="text" name="CustPostal" size="20" maxlength="30"></td>
                             </tr>
 
                             <tr>
