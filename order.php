@@ -58,17 +58,72 @@ Assignment: Project Workshop 1
             INFO INPUT FOR BOOKING AND CUSTOMER DOING THE BOOKING --> 
 
             <div id="section"><!-- section starts -->
+                <div02>
+
                 <?php 
-                // DM and JM : Stores the package ID in a variable
+                // Darcie Milliken : Store the package ID in a variable and display the details of the chosen package 
+
                 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                 $package_ID = substr($actual_link, -1); 
                 print "You have selected package # ".$package_ID;
+                $link = mysqli_connect("localhost", "root", "", "travelexperts") 
+                        or die("Connection Error: " . mysqli_connect_error());   
+                $sql = "SELECT * FROM `packages` WHERE `PackageId`= $package_ID";
+
+                $result = mysqli_query($link, $sql) or die("SQL Error");
+                // LM wrote this block here
+                print("<table cellpadding = '5' cellspacing='5' style='float:right;'>");
+                print("<col width='200px'>");
+                print("<col width='200px'>");
+                print("<col width='100px'>");
+                print("<col width='100px'>");
+                print("<col width='100px'>");
+                print("<col width='00px'>");
+
+                // DM: Printing the first row of table with headers      
+                print("<strong>");
+                print("<tr>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Package Name </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Description </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Departure Date </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Return Date </td>");
+                print("<td style='background-color:rgba(1,1,1,0.9);'> Price </td>");
+                print("<td>  </td>");             // Order Buttons will go in this column.
+                print("</tr>");
+                print("</strong>");
+
+                // DM: Printing packages with valid dates from the database. Styles by LM. 
+                while($selected_package = mysqli_fetch_assoc($result))
+                    {
+                        
+                        print("<tr>");
+                        echo "<td style='background-color:rgba(1,1,1,0.7); color:#99FF33;'> " . $selected_package["PkgName"] . "</td>";
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $selected_package["PkgDesc"] . "</td>";
+                       
+                        // Formatting the dates to look nicer
+                        $start_date = date_create($selected_package["PkgStartDate"]);
+                        $start_date = date_format($start_date, 'M j Y');
+                       
+                        $end_date = date_create($selected_package["PkgEndDate"]);
+                        $end_date = date_format($end_date, 'M j Y');
+
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $start_date . "</td>";
+
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> " . $end_date . "</td>";
+
+                        // let's try and format the prices here
+                        $formatted_price = number_format((float)$selected_package["PkgBasePrice"], 2, '.', '');
+                        echo "<td style='background-color:rgba(1,1,1,0.5);'> $" .  $formatted_price . "</td>";
+
+                        print("</tr>");
+                    }
                 ?>
+            </div02>
                 <form name="registerBooking" action="validateBook.php">
-                    <input type='hidden' name='PackageId' value="<?php echo "$package_ID"; ?> /> 
+                    
                     <div02>
                         <h4><b>Product Selection</b></h4>                        
-
+                        <input type='hidden' name='PackageId' value="<?php echo "$package_ID"; ?> /> 
                         <hr><!-- Horizontal rule -->
                         <table style="margin-top:10px; margin-bottom:10px;">
                             <col width="100px">
@@ -77,18 +132,20 @@ Assignment: Project Workshop 1
                             <col width="100px">
                             <col width="100px">
 
-                            <tr>
-                                <td align="center"> Flight<br><input type="radio" name="flight">
+                            <tr >
+                                <td align="center"> <br><input type="radio" name="flight-product"> Flight
                                 </td>
-                                <td align="center"> Flight-Hotel<br><input type="radio" name="flight+hotel">
+                                 <td align="center"> <br><input type="radio" name="flight-product"> Flight + Hotel
                                 </td>
-                                <td align="center"> Cruise<br><input type="radio" name="cruise">
+                                <td align="center"><br><input type="radio" name="cruise-product">  Cruise
                                 </td>
-                                <td align="center"> Cruise-Hotel<br><input type="radio" name="cruise+hotel">
+                                <td align="center"> <br><input type="radio" name="cruise-product"> Cruise + Hotel
                                 </td>
-                                <td align="center"> Rentals<br><input type="radio" name="rentals">
+                                <td align="center"> <br><input type="radio" name="rental"> Car Rental
                                 </td>
                             </tr>
+
+
                         </table>
 
                         <h4><b>Destination information</b></h4>
