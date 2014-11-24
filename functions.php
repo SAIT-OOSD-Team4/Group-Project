@@ -85,7 +85,6 @@ function compare_dates($dateDB)
 ?>
 
 
-<<<<<<< HEAD
 <?php
 //Jasmeen Kathuria
 // This Code is linked to the Order Page (order.php)
@@ -119,10 +118,3 @@ function compare_dates($dateDB)
         return $result;
     }
 ?>
-
-
-
-
-
-
-

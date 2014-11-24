@@ -31,7 +31,7 @@
 
                     date_default_timezone_set('America/Edmonton');
                 ?>
-            
+                
             </div><!-- header ends -->   
 
             
@@ -63,7 +63,7 @@
                 // Darcie M wrote the functionality
                 // Leisy M added the styles
 
-                session_start();
+                //session_start();
 
 
                 //DM: Set up database Connection

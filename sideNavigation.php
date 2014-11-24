@@ -1,3 +1,10 @@
+<!--
+Student:Leisy Moliner Hernandez
+Course Module: CPRG210
+Date: Nov 21,2014
+Assignment: PROJ207 Threaded Workshop Project
+-->
+
 <!DOCTYPE html>
 <html>
 
@@ -13,10 +20,12 @@
         <h2 style="text-align:left;">our blog</h2>
         <hr/>
         <div03>
-           <?php @readfile('http://output31.rssinclude.com/output?type=php&id=937153&hash=c166fd231745e804fb5eadb0400dbf4d')?>
+            <!-- link to company blog and RSS feed -->
+            <?php @readfile('http://output31.rssinclude.com/output?type=php&id=937153&hash=c166fd231745e804fb5eadb0400dbf4d')?>
         </div03>
         
         <div03>
+            <!-- space for reviews and comments from customers -->
             <br />
             <h2 style="text-align:left;">reviews</h2>
             <hr/>

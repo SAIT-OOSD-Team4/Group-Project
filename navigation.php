@@ -1,3 +1,10 @@
+<!--
+Student:Leisy Moliner Hernandez
+Course Module: CPRG210
+Date: Nov 21,2014
+Assignment: PROJ207 Threaded Workshop Project
+-->
+
 <!DOCTYPE html>
 <html>
 
@@ -25,7 +32,7 @@
                 <td><a href="packages.php" id="buttonNav">Destinations</a></td>
                 <td><a href="contact.php" id="buttonNav">About Us</a></td>
                 <td style="float:right;">
-                    <!--list displaying additional links-->
+                    <!--list displaying additional links and access to MyTravel feature-->
                     <ul id="sddm">
                         <li><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">MyTravel</a>
                             <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">

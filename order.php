@@ -77,7 +77,7 @@ Assignment: Project Workshop 1
                     print("<col width='100px'>");
                     print("<col width='100px'>");
                     print("<col width='100px'>");
-                    print("<col width='00px'>");
+                    print("<col width='100px'>");
 
                     // DM: Printing the first row of table with headers      
                     print("<strong>");
@@ -127,7 +127,7 @@ Assignment: Project Workshop 1
                         <hr><!-- Horizontal rule -->
                         <table style="margin-top:10px; margin-bottom:10px;">
                            
-                            <tr >
+                            <tr>
                                 <td align="center"><input type="radio" name="flight-product">Flight
                                 </td>
                                  <td align="center"><input type="radio" name="flight-product">Flight + Hotel

@@ -1,5 +1,8 @@
 <!--
-Jasmeen Kathuria & Leisy Moliner
+Student:Leisy Moliner Hernandez and Jasmeen Kathuria 
+Course Module: CPRG210
+Date: Nov 21,2014
+Assignment: PROJ207 Threaded Workshop Project
 -->
 
 <!DOCTYPE html>

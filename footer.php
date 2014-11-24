@@ -1,24 +1,24 @@
-<!----- Leisy Moliner & Jasmeen Kathuria----->
-
+<!--
+Student:Leisy Moliner Hernandez  & Jasmeen Kathuria
+Course Module: CPRG210
+Date: Nov 21,2014
+Assignment: PROJ207 Threaded Workshop Project
+-->
 
 <!DOCTYPE html>
 <html>
-
     <head>
-			<!--- Social Media Icons Code --->
-			
-			<!----- Social Media Icons Code Ends -------->
+        
 	</head>
     <body>
         Copyright Team4 &copy; 2014<br>
-                <!--
+                <!-- to display date and time if required by Travel Experts
                 <script>
                     var x; 
                     for(x=1; x<=50; x++) document.write('-');/*display underscore footer*/
                     document.write("<br>");
                     document.write(days[today.getDay()]+", ");/*display date on footer*/
                     document.write(months[today.getMonth()].toUpperCase()+" "+today.getDate()+", "+today.getFullYear());
-					
                 </script>  
                 -->
 				
