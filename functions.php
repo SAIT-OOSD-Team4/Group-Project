@@ -1,5 +1,5 @@
 <!--
-Student:Leisy Moliner Hernandez, Jose Marcano, Darcie Milliken, Jazmeen Kathuria
+Student:Leisy Moliner Hernandez, Jose Marcano, Darcie Milliken, Jasmeen Kathuria
 Course Module: CPRG210
 Date: October 30,2014
 Assignment: PROJ207 Threaded Workshop Project
@@ -117,4 +117,5 @@ function compare_dates($dateDB)
         mysqli_close($link);
         return $result;
     }
+	
 ?>
